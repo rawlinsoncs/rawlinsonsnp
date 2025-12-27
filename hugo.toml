@@ -12,3 +12,22 @@ title = 'Rawlinson Student Nutrition Program'
   [[module.imports]]
     path = "github.com/google/docsy"
     disable = false
+
+[params.ui]
+  sidebar_menu_compact = true
+  ul_show = 1
+  sidebar_menu_foldable = true
+  sidebar_cache_limit = 1000
+
+[[menu.main]]
+  name = "Rawlinson Community School"
+  weight = 50
+  url = "https://www.tdsb.on.ca/Find-your/Schools/schno/6367"
+  pre = "<i class='fa-solid fa-school'></i>"
+
+[[menu.main]]
+  name = "TFSS Student Nutrition Programs"
+  weight = 40
+  url = "https://tfss.ca/student-nutrition-programs/"
+  pre = "<i class='fa-solid fa-apple-whole'></i>"
+
