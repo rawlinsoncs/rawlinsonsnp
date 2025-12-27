@@ -1,6 +1,5 @@
 +++
 date = '2025-12-27T11:17:30-05:00'
-draft = true
 type = "docs"
 weight = 1
 title = 'Teacher Guidance'
