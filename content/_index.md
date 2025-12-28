@@ -12,7 +12,7 @@ description: How the Rawlinson Student Nutrition Program supports students — a
 
 Providing a daily snack to every student — powered by volunteers, community support, and care.
 
-{{< blocks/button color="primary" href="/docs/community/" icon="fas fa-arrow-alt-circle-right" >}}
+{{< blocks/button color="primary" href="docs/community/" icon="fas fa-arrow-alt-circle-right" >}}
 Learn how the program works
 {{< /blocks/button >}}
 
@@ -110,7 +110,7 @@ Support the program by:
 
 If you’d like to learn more about how the program works — including dietary needs, allergies, funding, and frequently asked questions — visit our in-depth guide.
 
-{{< blocks/button color="primary" href="/docs/community/" icon="fas fa-arrow-alt-circle-right" >}}
+{{< blocks/button color="primary" href="docs/community/" icon="fas fa-arrow-alt-circle-right" >}}
 Student Nutrition Program — Family Guide
 {{< /blocks/button >}}
 
