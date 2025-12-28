@@ -69,6 +69,17 @@ The program exists to:
 
 Our goal is **consistency and equity**, not perfection.
 
+### Nutrition Guidelines and Program Standards
+
+The Rawlinson Snack Program follows the nutrition standards and guidance set by the TDSB and the City of Toronto.
+
+For reference:
+- [**TDSB Student Nutrition – Frequently Asked Questions**](https://www.tdsb.on.ca/Elementary-School/Supporting-You/Student-Nutrition/Frequently-Asked-Questions)
+- [**City of Toronto – Student Nutrition Program Nutrition Guidelines**](https://www.toronto.ca/community-people/health-wellness-care/health-programs-advice/student-nutrition-program/nutrition-guidelines/)
+- [**Toronto Public Health – Student Nutrition Program Guidelines (PDF)**](https://www.toronto.ca/wp-content/uploads/2017/11/962f-tph-SNPguideline-fs-eng-2017-09-05.pdf)
+
+These guidelines inform what foods can be served, portion sizes, and ingredient requirements.
+
 ---
 
 ## Reporting an Issue
@@ -103,18 +114,41 @@ Teachers are **not required to act** on this calendar.
 
 ## Frequently Asked Questions
 
-### What are the bags sent to classrooms, and what if my students don’t receive one?
+### What are the bags sometimes added to the classroom bins, and what if my students don’t receive one?
 
 The bags contain **dietary substitutions** for students who require them.
 
 - If a student does not receive a bag, their dietary needs **do not require a substitution**
 - If you are unsure, please check with the **office**
 
+Please return the bags to the bin after they have been consumed. This helps reduce waste.
+
+---
+
+### Where do we return the snack bins after snack time?
+
+All snack bins should be returned to the snack tables by the office.
+
 ---
 
 ### Should a snack be offered to every student in the class?
 
 Yes. A snack should be offered to **every student**, regardless of whether an opt-in form has been submitted.
+
+---
+
+### What does a typical snack include?
+
+Each snack day includes **two components**, following Student Nutrition Program guidelines:
+
+**1. Vegetables or fruit**
+
+**2. One of the following:**
+- Whole grain products  
+- Protein foods  
+- Milk or milk alternatives  
+
+The exact items vary based on availability, seasonality, and funding source.
 
 ---
 
@@ -144,9 +178,14 @@ Availability and funding sources may limit what we can provide.
 
 ### What criteria are used for snack items?
 
-All items follow:
-- **TDSB nutrition guidelines**
-- Sugar and sodium limits appropriate for student nutrition programs
+Snack items follow **TDSB and City of Toronto Student Nutrition Program guidelines**, including limits on sugar and sodium.
+
+For example, whole grain products are selected using criteria such as:
+- Whole grain, whole wheat, or bran listed first on the ingredient list
+- **≤ 8 g of sugar per 30 g serving**
+- **≤ 10% Daily Value (DV) of sodium per serving**
+
+These standards help ensure snacks support student health while remaining practical to distribute in a school setting.
 
 ---
 
@@ -156,7 +195,7 @@ We do not have:
 - A prep kitchen
 - Food handling certifications
 
-For safety reasons, this limits what we can serve.
+For safety reasons — and to comply with Student Nutrition Program guidelines — this limits what we can serve.
 
 ---
 
