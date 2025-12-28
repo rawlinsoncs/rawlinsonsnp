@@ -19,6 +19,10 @@ title = 'Rawlinson Student Nutrition Program'
   sidebar_menu_foldable = true
   sidebar_cache_limit = 1000
 
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
+
 [[menu.main]]
   name = "Rawlinson Community School"
   weight = 50
