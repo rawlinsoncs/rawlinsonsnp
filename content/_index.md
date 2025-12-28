@@ -68,32 +68,36 @@ A reliable daily snack helps:
 
 {{% blocks/feature icon="fa-hands-helping" title="Volunteer" %}}
 
+{{< blocks/button color="primary" href="https://docs.google.com/forms/d/e/1FAIpQLSc9vXzS8igf1ctnruGFHIYfP6KN_mPStFYAoPrZKV8o9Lds9g/viewform?usp=header" icon="fas fa-hands-helping" >}}
+Sign up to volunteer
+{{< /blocks/button >}}
+
 Help with:
 - Packing snacks
 - Organizing dietary substitutions
 - Moving and storing food
 - Program coordination
 
-{{< blocks/button color="primary" href="https://docs.google.com/forms/d/e/1FAIpQLSc9vXzS8igf1ctnruGFHIYfP6KN_mPStFYAoPrZKV8o9Lds9g/viewform?usp=header" icon="fas fa-hands-helping" >}}
-Sign up to volunteer
-{{< /blocks/button >}}
-
 {{% /blocks/feature %}}
 
 {{% blocks/feature icon="fa-donate" title="Donate" %}}
+
+{{< blocks/button color="primary" href="https://tfss.ca/donate/schoolsites-snp/" icon="fas fa-donate" >}}
+Make a donation
+{{< /blocks/button >}}
 
 Financial contributions help:
 - Supplement donated food
 - Purchase items that meet nutrition guidelines
 - Fill gaps when donated items are unavailable
 
-{{< blocks/button color="primary" href="https://tfss.ca/donate/schoolsites-snp/" icon="fas fa-donate" >}}
-Make a donation
-{{< /blocks/button >}}
-
 {{% /blocks/feature %}}
 
 {{% blocks/feature icon="fa-bullhorn" title="Champion the program" %}}
+
+{{< blocks/button color="primary" href="docs/community/" icon="fas fa-bullhorn" >}}
+Find out more
+{{< /blocks/button >}}
 
 Support the program by:
 - Sharing accurate information
