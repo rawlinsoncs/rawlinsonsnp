@@ -1,0 +1,13 @@
+// Rawlinson palette (from school logo)
+$primary:  #152D75; // blue
+$secondary:#FFDB03; // yellow
+
+// Links & accents
+$link-color: $primary;
+$link-hover-color: darken($primary, 10%);
+
+// Make secondary buttons readable (yellow background needs dark text)
+$btn-secondary-color: $primary;
+
+// Optional: tweak the “info” color so it doesn’t clash with the blue
+$info: lighten($primary, 35%);

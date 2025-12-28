@@ -1,7 +1,3 @@
-/*
-Projects can override this file. For details, see:
-https://www.docsy.dev/docs/content/lookandfeel/#project-style-files
-*/
 :root,
 [data-bs-theme="light"] {
   --td-pre-bg: var(--bs-tertiary-bg); }
@@ -36,42 +32,42 @@ https://www.docsy.dev/docs/content/lookandfeel/#project-style-files
   --bs-gray-700: #495057;
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
-  --bs-primary: #0d6efd;
-  --bs-secondary: #6c757d;
+  --bs-primary: #152D75;
+  --bs-secondary: #FFDB03;
   --bs-success: #198754;
-  --bs-info: #0dcaf0;
+  --bs-info: #5b7de2;
   --bs-warning: #ffc107;
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
-  --bs-primary-rgb: 13, 110, 253;
-  --bs-secondary-rgb: 108, 117, 125;
+  --bs-primary-rgb: 21, 45, 117;
+  --bs-secondary-rgb: 255, 219, 3;
   --bs-success-rgb: 25, 135, 84;
-  --bs-info-rgb: 13, 202, 240;
+  --bs-info-rgb: 90.94565217, 124.59782609, 225.55434783;
   --bs-warning-rgb: 255, 193, 7;
   --bs-danger-rgb: 220, 53, 69;
   --bs-light-rgb: 248, 249, 250;
   --bs-dark-rgb: 33, 37, 41;
-  --bs-primary-text-emphasis: #052c65;
-  --bs-secondary-text-emphasis: #2b2f32;
+  --bs-primary-text-emphasis: #08122f;
+  --bs-secondary-text-emphasis: #665801;
   --bs-success-text-emphasis: #0a3622;
-  --bs-info-text-emphasis: #055160;
+  --bs-info-text-emphasis: #24325a;
   --bs-warning-text-emphasis: #664d03;
   --bs-danger-text-emphasis: #58151c;
   --bs-light-text-emphasis: #495057;
   --bs-dark-text-emphasis: #495057;
-  --bs-primary-bg-subtle: #cfe2ff;
-  --bs-secondary-bg-subtle: #e2e3e5;
+  --bs-primary-bg-subtle: #d0d5e3;
+  --bs-secondary-bg-subtle: #fff8cd;
   --bs-success-bg-subtle: #d1e7dd;
-  --bs-info-bg-subtle: #cff4fc;
+  --bs-info-bg-subtle: #dee5f9;
   --bs-warning-bg-subtle: #fff3cd;
   --bs-danger-bg-subtle: #f8d7da;
   --bs-light-bg-subtle: #fcfcfd;
   --bs-dark-bg-subtle: #ced4da;
-  --bs-primary-border-subtle: #9ec5fe;
-  --bs-secondary-border-subtle: #c4c8cb;
+  --bs-primary-border-subtle: #a1abc8;
+  --bs-secondary-border-subtle: #fff19a;
   --bs-success-border-subtle: #a3cfbb;
-  --bs-info-border-subtle: #9eeaf9;
+  --bs-info-border-subtle: #bdcbf3;
   --bs-warning-border-subtle: #ffe69c;
   --bs-danger-border-subtle: #f1aeb5;
   --bs-light-border-subtle: #e9ecef;
@@ -100,11 +96,11 @@ https://www.docsy.dev/docs/content/lookandfeel/#project-style-files
   --bs-tertiary-bg: #f8f9fa;
   --bs-tertiary-bg-rgb: 248, 249, 250;
   --bs-heading-color: inherit;
-  --bs-link-color: #0d6efd;
-  --bs-link-color-rgb: 13, 110, 253;
+  --bs-link-color: #152D75;
+  --bs-link-color-rgb: 21, 45, 117;
   --bs-link-decoration: underline;
-  --bs-link-hover-color: #0a58ca;
-  --bs-link-hover-color-rgb: 10, 88, 202;
+  --bs-link-hover-color: #0d1c4a;
+  --bs-link-hover-color-rgb: 13.23913043, 28.36956522, 73.76086957;
   --bs-code-color: #d63384;
   --bs-highlight-color: #212529;
   --bs-highlight-bg: #fff3cd;
@@ -125,7 +121,7 @@ https://www.docsy.dev/docs/content/lookandfeel/#project-style-files
   --bs-box-shadow-inset: inset 0 1px 2px rgba(0, 0, 0, 0.075);
   --bs-focus-ring-width: 0.25rem;
   --bs-focus-ring-opacity: 0.25;
-  --bs-focus-ring-color: rgba(13, 110, 253, 0.25);
+  --bs-focus-ring-color: rgba(21, 45, 117, 0.25);
   --bs-form-valid-color: #198754;
   --bs-form-valid-border-color: #198754;
   --bs-form-invalid-color: #dc3545;
@@ -147,35 +143,35 @@ https://www.docsy.dev/docs/content/lookandfeel/#project-style-files
   --bs-tertiary-color-rgb: 222, 226, 230;
   --bs-tertiary-bg: #2b3035;
   --bs-tertiary-bg-rgb: 43, 48, 53;
-  --bs-primary-text-emphasis: #6ea8fe;
-  --bs-secondary-text-emphasis: #a7acb1;
+  --bs-primary-text-emphasis: #7381ac;
+  --bs-secondary-text-emphasis: #ffe968;
   --bs-success-text-emphasis: #75b798;
-  --bs-info-text-emphasis: #6edff6;
+  --bs-info-text-emphasis: #9db1ed;
   --bs-warning-text-emphasis: #ffda6a;
   --bs-danger-text-emphasis: #ea868f;
   --bs-light-text-emphasis: #f8f9fa;
   --bs-dark-text-emphasis: #dee2e6;
-  --bs-primary-bg-subtle: #031633;
-  --bs-secondary-bg-subtle: #161719;
+  --bs-primary-bg-subtle: #040917;
+  --bs-secondary-bg-subtle: #332c01;
   --bs-success-bg-subtle: #051b11;
-  --bs-info-bg-subtle: #032830;
+  --bs-info-bg-subtle: #12192d;
   --bs-warning-bg-subtle: #332701;
   --bs-danger-bg-subtle: #2c0b0e;
   --bs-light-bg-subtle: #343a40;
   --bs-dark-bg-subtle: #1a1d20;
-  --bs-primary-border-subtle: #084298;
-  --bs-secondary-border-subtle: #41464b;
+  --bs-primary-border-subtle: #0d1b46;
+  --bs-secondary-border-subtle: #998302;
   --bs-success-border-subtle: #0f5132;
-  --bs-info-border-subtle: #087990;
+  --bs-info-border-subtle: #374b87;
   --bs-warning-border-subtle: #997404;
   --bs-danger-border-subtle: #842029;
   --bs-light-border-subtle: #495057;
   --bs-dark-border-subtle: #343a40;
   --bs-heading-color: inherit;
-  --bs-link-color: #6ea8fe;
-  --bs-link-hover-color: #8bb9fe;
-  --bs-link-color-rgb: 110, 168, 254;
-  --bs-link-hover-color-rgb: 139, 185, 254;
+  --bs-link-color: #7381ac;
+  --bs-link-hover-color: #8f9abd;
+  --bs-link-color-rgb: 115, 129, 172;
+  --bs-link-hover-color-rgb: 143, 154, 189;
   --bs-code-color: #e685b5;
   --bs-highlight-color: #dee2e6;
   --bs-highlight-bg: #664d03;
@@ -1524,26 +1520,26 @@ progress {
 
 .table-primary {
   --bs-table-color: #000;
-  --bs-table-bg: #cfe2ff;
-  --bs-table-border-color: #a6b5cc;
-  --bs-table-striped-bg: #c5d7f2;
+  --bs-table-bg: #d0d5e3;
+  --bs-table-border-color: #a6aab6;
+  --bs-table-striped-bg: #c6cad8;
   --bs-table-striped-color: #000;
-  --bs-table-active-bg: #bacbe6;
+  --bs-table-active-bg: #bbc0cc;
   --bs-table-active-color: #000;
-  --bs-table-hover-bg: #bfd1ec;
+  --bs-table-hover-bg: #c0c5d2;
   --bs-table-hover-color: #000;
   color: var(--bs-table-color);
   border-color: var(--bs-table-border-color); }
 
 .table-secondary {
   --bs-table-color: #000;
-  --bs-table-bg: #e2e3e5;
-  --bs-table-border-color: #b5b6b7;
-  --bs-table-striped-bg: #d7d8da;
+  --bs-table-bg: #fff8cd;
+  --bs-table-border-color: #ccc6a4;
+  --bs-table-striped-bg: #f2ecc3;
   --bs-table-striped-color: #000;
-  --bs-table-active-bg: #cbccce;
+  --bs-table-active-bg: #e6dfb9;
   --bs-table-active-color: #000;
-  --bs-table-hover-bg: #d1d2d4;
+  --bs-table-hover-bg: #ece5be;
   --bs-table-hover-color: #000;
   color: var(--bs-table-color);
   border-color: var(--bs-table-border-color); }
@@ -1563,13 +1559,13 @@ progress {
 
 .table-info {
   --bs-table-color: #000;
-  --bs-table-bg: #cff4fc;
-  --bs-table-border-color: #a6c3ca;
-  --bs-table-striped-bg: #c5e8ef;
+  --bs-table-bg: #dee5f9;
+  --bs-table-border-color: #b2b7c7;
+  --bs-table-striped-bg: #d3daed;
   --bs-table-striped-color: #000;
-  --bs-table-active-bg: #badce3;
+  --bs-table-active-bg: #c8cee0;
   --bs-table-active-color: #000;
-  --bs-table-hover-bg: #bfe2e9;
+  --bs-table-hover-bg: #cdd4e6;
   --bs-table-hover-color: #000;
   color: var(--bs-table-color);
   border-color: var(--bs-table-border-color); }
@@ -1705,9 +1701,9 @@ progress {
   .form-control:focus {
     color: var(--bs-body-color);
     background-color: var(--bs-body-bg);
-    border-color: #86b7fe;
+    border-color: #8a96ba;
     outline: 0;
-    box-shadow: var(--bs-box-shadow-inset), 0 0 0 0.25rem rgba(13, 110, 253, 0.25); }
+    box-shadow: var(--bs-box-shadow-inset), 0 0 0 0.25rem rgba(21, 45, 117, 0.25); }
   .form-control::-webkit-date-and-time-value {
     min-width: 85px;
     height: 1.5em;
@@ -1826,9 +1822,9 @@ textarea.form-control-lg {
     .form-select {
       transition: none; } }
   .form-select:focus {
-    border-color: #86b7fe;
+    border-color: #8a96ba;
     outline: 0;
-    box-shadow: var(--bs-box-shadow-inset), 0 0 0 0.25rem rgba(13, 110, 253, 0.25); }
+    box-shadow: var(--bs-box-shadow-inset), 0 0 0 0.25rem rgba(21, 45, 117, 0.25); }
   .form-select[multiple], .form-select[size]:not([size="1"]) {
     padding-right: 0.75rem;
     background-image: none; }
@@ -1895,19 +1891,19 @@ textarea.form-control-lg {
   .form-check-input:active {
     filter: brightness(90%); }
   .form-check-input:focus {
-    border-color: #86b7fe;
+    border-color: #8a96ba;
     outline: 0;
-    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25); }
+    box-shadow: 0 0 0 0.25rem rgba(21, 45, 117, 0.25); }
   .form-check-input:checked {
-    background-color: #0d6efd;
-    border-color: #0d6efd; }
+    background-color: #152D75;
+    border-color: #152D75; }
     .form-check-input:checked[type="checkbox"] {
       --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e"), var(--bs-gradient); }
     .form-check-input:checked[type="radio"] {
       --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e"), var(--bs-gradient); }
   .form-check-input[type="checkbox"]:indeterminate {
-    background-color: #0d6efd;
-    border-color: #0d6efd;
+    background-color: #152D75;
+    border-color: #152D75;
     --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/%3e%3c/svg%3e"), var(--bs-gradient); }
   .form-check-input:disabled {
     pointer-events: none;
@@ -1931,7 +1927,7 @@ textarea.form-control-lg {
       .form-switch .form-check-input {
         transition: none; } }
     .form-switch .form-check-input:focus {
-      --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%2386b7fe'/%3e%3c/svg%3e"); }
+      --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%238a96ba'/%3e%3c/svg%3e"); }
     .form-switch .form-check-input:checked {
       background-position: right center;
       --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e"), var(--bs-gradient); }
@@ -1967,9 +1963,9 @@ textarea.form-control-lg {
   .form-range:focus {
     outline: 0; }
     .form-range:focus::-webkit-slider-thumb {
-      box-shadow: 0 0 0 1px #fff, 0 0 0 0.25rem rgba(13, 110, 253, 0.25); }
+      box-shadow: 0 0 0 1px #fff, 0 0 0 0.25rem rgba(21, 45, 117, 0.25); }
     .form-range:focus::-moz-range-thumb {
-      box-shadow: 0 0 0 1px #fff, 0 0 0 0.25rem rgba(13, 110, 253, 0.25); }
+      box-shadow: 0 0 0 1px #fff, 0 0 0 0.25rem rgba(21, 45, 117, 0.25); }
   .form-range::-moz-focus-outer {
     border: 0; }
   .form-range::-webkit-slider-thumb {
@@ -1977,7 +1973,7 @@ textarea.form-control-lg {
     height: 1rem;
     margin-top: -0.25rem;
     appearance: none;
-    background-color: #0d6efd;
+    background-color: #152D75;
     background-image: var(--bs-gradient);
     border: 0;
     border-radius: 1rem;
@@ -1987,7 +1983,7 @@ textarea.form-control-lg {
       .form-range::-webkit-slider-thumb {
         transition: none; } }
     .form-range::-webkit-slider-thumb:active {
-      background-color: #b6d4fe;
+      background-color: #b9c0d6;
       background-image: var(--bs-gradient); }
   .form-range::-webkit-slider-runnable-track {
     width: 100%;
@@ -2002,7 +1998,7 @@ textarea.form-control-lg {
     width: 1rem;
     height: 1rem;
     appearance: none;
-    background-color: #0d6efd;
+    background-color: #152D75;
     background-image: var(--bs-gradient);
     border: 0;
     border-radius: 1rem;
@@ -2012,7 +2008,7 @@ textarea.form-control-lg {
       .form-range::-moz-range-thumb {
         transition: none; } }
     .form-range::-moz-range-thumb:active {
-      background-color: #b6d4fe;
+      background-color: #b9c0d6;
       background-image: var(--bs-gradient); }
   .form-range::-moz-range-track {
     width: 100%;
@@ -2407,35 +2403,35 @@ div.drawio .input-group-sm > button,
 
 .btn-primary {
   --bs-btn-color: #fff;
-  --bs-btn-bg: #0d6efd;
-  --bs-btn-border-color: #0d6efd;
+  --bs-btn-bg: #152D75;
+  --bs-btn-border-color: #152D75;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #0b5ed7;
-  --bs-btn-hover-border-color: #0a58ca;
-  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-hover-bg: #122663;
+  --bs-btn-hover-border-color: #11245e;
+  --bs-btn-focus-shadow-rgb: 56, 77, 138;
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #0a58ca;
-  --bs-btn-active-border-color: #0a53be;
+  --bs-btn-active-bg: #11245e;
+  --bs-btn-active-border-color: #102258;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #0d6efd;
-  --bs-btn-disabled-border-color: #0d6efd; }
+  --bs-btn-disabled-bg: #152D75;
+  --bs-btn-disabled-border-color: #152D75; }
 
 .btn-secondary {
-  --bs-btn-color: #fff;
-  --bs-btn-bg: #6c757d;
-  --bs-btn-border-color: #6c757d;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #5c636a;
-  --bs-btn-hover-border-color: #565e64;
-  --bs-btn-focus-shadow-rgb: 130, 138, 145;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #565e64;
-  --bs-btn-active-border-color: #51585e;
+  --bs-btn-color: #000;
+  --bs-btn-bg: #FFDB03;
+  --bs-btn-border-color: #FFDB03;
+  --bs-btn-hover-color: #000;
+  --bs-btn-hover-bg: #ffe029;
+  --bs-btn-hover-border-color: #ffdf1c;
+  --bs-btn-focus-shadow-rgb: 217, 186, 3;
+  --bs-btn-active-color: #000;
+  --bs-btn-active-bg: #ffe235;
+  --bs-btn-active-border-color: #ffdf1c;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #6c757d;
-  --bs-btn-disabled-border-color: #6c757d; }
+  --bs-btn-disabled-color: #000;
+  --bs-btn-disabled-bg: #FFDB03;
+  --bs-btn-disabled-border-color: #FFDB03; }
 
 .btn-success {
   --bs-btn-color: #fff;
@@ -2455,19 +2451,19 @@ div.drawio .input-group-sm > button,
 
 .btn-info, .td-blog .td-rss-button {
   --bs-btn-color: #000;
-  --bs-btn-bg: #0dcaf0;
-  --bs-btn-border-color: #0dcaf0;
+  --bs-btn-bg: #5b7de2;
+  --bs-btn-border-color: #5b7de2;
   --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: #31d2f2;
-  --bs-btn-hover-border-color: #25cff2;
-  --bs-btn-focus-shadow-rgb: 11, 172, 204;
+  --bs-btn-hover-bg: #7490e6;
+  --bs-btn-hover-border-color: #6b8ae4;
+  --bs-btn-focus-shadow-rgb: 77, 106, 192;
   --bs-btn-active-color: #000;
-  --bs-btn-active-bg: #3dd5f3;
-  --bs-btn-active-border-color: #25cff2;
+  --bs-btn-active-bg: #7c97e7;
+  --bs-btn-active-border-color: #6b8ae4;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #000;
-  --bs-btn-disabled-bg: #0dcaf0;
-  --bs-btn-disabled-border-color: #0dcaf0; }
+  --bs-btn-disabled-bg: #5b7de2;
+  --bs-btn-disabled-border-color: #5b7de2; }
 
 .btn-warning {
   --bs-btn-color: #000;
@@ -2534,35 +2530,35 @@ div.drawio .input-group-sm > button,
   --bs-btn-disabled-border-color: #212529; }
 
 .btn-outline-primary, div.drawio button {
-  --bs-btn-color: #0d6efd;
-  --bs-btn-border-color: #0d6efd;
+  --bs-btn-color: #152D75;
+  --bs-btn-border-color: #152D75;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #0d6efd;
-  --bs-btn-hover-border-color: #0d6efd;
-  --bs-btn-focus-shadow-rgb: 13, 110, 253;
+  --bs-btn-hover-bg: #152D75;
+  --bs-btn-hover-border-color: #152D75;
+  --bs-btn-focus-shadow-rgb: 21, 45, 117;
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #0d6efd;
-  --bs-btn-active-border-color: #0d6efd;
+  --bs-btn-active-bg: #152D75;
+  --bs-btn-active-border-color: #152D75;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #0d6efd;
+  --bs-btn-disabled-color: #152D75;
   --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #0d6efd;
+  --bs-btn-disabled-border-color: #152D75;
   --bs-gradient: none; }
 
 .btn-outline-secondary {
-  --bs-btn-color: #6c757d;
-  --bs-btn-border-color: #6c757d;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #6c757d;
-  --bs-btn-hover-border-color: #6c757d;
-  --bs-btn-focus-shadow-rgb: 108, 117, 125;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #6c757d;
-  --bs-btn-active-border-color: #6c757d;
+  --bs-btn-color: #FFDB03;
+  --bs-btn-border-color: #FFDB03;
+  --bs-btn-hover-color: #000;
+  --bs-btn-hover-bg: #FFDB03;
+  --bs-btn-hover-border-color: #FFDB03;
+  --bs-btn-focus-shadow-rgb: 255, 219, 3;
+  --bs-btn-active-color: #000;
+  --bs-btn-active-bg: #FFDB03;
+  --bs-btn-active-border-color: #FFDB03;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #6c757d;
+  --bs-btn-disabled-color: #FFDB03;
   --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #6c757d;
+  --bs-btn-disabled-border-color: #FFDB03;
   --bs-gradient: none; }
 
 .btn-outline-success {
@@ -2582,19 +2578,19 @@ div.drawio .input-group-sm > button,
   --bs-gradient: none; }
 
 .btn-outline-info {
-  --bs-btn-color: #0dcaf0;
-  --bs-btn-border-color: #0dcaf0;
+  --bs-btn-color: #5b7de2;
+  --bs-btn-border-color: #5b7de2;
   --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: #0dcaf0;
-  --bs-btn-hover-border-color: #0dcaf0;
-  --bs-btn-focus-shadow-rgb: 13, 202, 240;
+  --bs-btn-hover-bg: #5b7de2;
+  --bs-btn-hover-border-color: #5b7de2;
+  --bs-btn-focus-shadow-rgb: 90.94565217, 124.59782609, 225.55434783;
   --bs-btn-active-color: #000;
-  --bs-btn-active-bg: #0dcaf0;
-  --bs-btn-active-border-color: #0dcaf0;
+  --bs-btn-active-bg: #5b7de2;
+  --bs-btn-active-border-color: #5b7de2;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #0dcaf0;
+  --bs-btn-disabled-color: #5b7de2;
   --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #0dcaf0;
+  --bs-btn-disabled-border-color: #5b7de2;
   --bs-gradient: none; }
 
 .btn-outline-warning {
@@ -2673,7 +2669,7 @@ div.drawio .input-group-sm > button,
   --bs-btn-disabled-color: #6c757d;
   --bs-btn-disabled-border-color: transparent;
   --bs-btn-box-shadow: 0 0 0 #000;
-  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-focus-shadow-rgb: 56, 77, 138;
   text-decoration: underline;
   background-image: none; }
   .btn-link:focus-visible {
@@ -2760,7 +2756,7 @@ div.drawio .input-group-sm > button,
   --bs-dropdown-link-hover-color: var(--bs-body-color);
   --bs-dropdown-link-hover-bg: var(--bs-tertiary-bg);
   --bs-dropdown-link-active-color: #fff;
-  --bs-dropdown-link-active-bg: #0d6efd;
+  --bs-dropdown-link-active-bg: #152D75;
   --bs-dropdown-link-disabled-color: var(--bs-tertiary-color);
   --bs-dropdown-item-padding-x: 1rem;
   --bs-dropdown-item-padding-y: 0.25rem;
@@ -2993,7 +2989,7 @@ div.drawio .input-group-sm > button,
   --bs-dropdown-divider-bg: var(--bs-border-color-translucent);
   --bs-dropdown-link-hover-bg: rgba(255, 255, 255, 0.15);
   --bs-dropdown-link-active-color: #fff;
-  --bs-dropdown-link-active-bg: #0d6efd;
+  --bs-dropdown-link-active-bg: #152D75;
   --bs-dropdown-link-disabled-color: #adb5bd;
   --bs-dropdown-header-color: #adb5bd; }
 
@@ -3152,7 +3148,7 @@ div.drawio .input-group-sm > button,
     color: var(--bs-nav-link-hover-color); }
   .nav-link:focus-visible {
     outline: 0;
-    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25); }
+    box-shadow: 0 0 0 0.25rem rgba(21, 45, 117, 0.25); }
   .nav-link.disabled, .nav-link:disabled {
     color: var(--bs-nav-link-disabled-color);
     pointer-events: none;
@@ -3188,7 +3184,7 @@ div.drawio .input-group-sm > button,
 .nav-pills {
   --bs-nav-pills-border-radius: var(--bs-border-radius);
   --bs-nav-pills-link-active-color: #fff;
-  --bs-nav-pills-link-active-bg: #0d6efd; }
+  --bs-nav-pills-link-active-bg: #152D75; }
   .nav-pills .nav-link {
     border-radius: var(--bs-nav-pills-border-radius); }
   .nav-pills .nav-link.active,
@@ -3770,8 +3766,8 @@ div.drawio .input-group-sm > button,
   --bs-accordion-btn-icon-width: 1.25rem;
   --bs-accordion-btn-icon-transform: rotate(-180deg);
   --bs-accordion-btn-icon-transition: transform 0.2s ease-in-out;
-  --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23052c65' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
-  --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%2308122f' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+  --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(21, 45, 117, 0.25);
   --bs-accordion-body-padding-x: 1.25rem;
   --bs-accordion-body-padding-y: 1rem;
   --bs-accordion-active-color: var(--bs-primary-text-emphasis);
@@ -3863,8 +3859,8 @@ div.drawio .input-group-sm > button,
     border-radius: 0; }
 
 [data-bs-theme="dark"] .accordion-button::after {
-  --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%236ea8fe'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708'/%3e%3c/svg%3e");
-  --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%236ea8fe'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708'/%3e%3c/svg%3e"); }
+  --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%237381ac'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708'/%3e%3c/svg%3e");
+  --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%237381ac'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708'/%3e%3c/svg%3e"); }
 
 .breadcrumb {
   --bs-breadcrumb-padding-x: 0;
@@ -3909,10 +3905,10 @@ div.drawio .input-group-sm > button,
   --bs-pagination-hover-border-color: var(--bs-border-color);
   --bs-pagination-focus-color: var(--bs-link-hover-color);
   --bs-pagination-focus-bg: var(--bs-secondary-bg);
-  --bs-pagination-focus-box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  --bs-pagination-focus-box-shadow: 0 0 0 0.25rem rgba(21, 45, 117, 0.25);
   --bs-pagination-active-color: #fff;
-  --bs-pagination-active-bg: #0d6efd;
-  --bs-pagination-active-border-color: #0d6efd;
+  --bs-pagination-active-bg: #152D75;
+  --bs-pagination-active-border-color: #152D75;
   --bs-pagination-disabled-color: var(--bs-secondary-color);
   --bs-pagination-disabled-bg: var(--bs-secondary-bg);
   --bs-pagination-disabled-border-color: var(--bs-border-color);
@@ -4098,7 +4094,7 @@ div.drawio .input-group-sm > button,
   --bs-progress-border-radius: var(--bs-border-radius);
   --bs-progress-box-shadow: var(--bs-box-shadow-inset);
   --bs-progress-bar-color: #fff;
-  --bs-progress-bar-bg: #0d6efd;
+  --bs-progress-bar-bg: #152D75;
   --bs-progress-bar-transition: width 0.6s ease;
   display: flex;
   height: var(--bs-progress-height);
@@ -4152,8 +4148,8 @@ div.drawio .input-group-sm > button,
   --bs-list-group-disabled-color: var(--bs-secondary-color);
   --bs-list-group-disabled-bg: var(--bs-body-bg);
   --bs-list-group-active-color: #fff;
-  --bs-list-group-active-bg: #0d6efd;
-  --bs-list-group-active-border-color: #0d6efd;
+  --bs-list-group-active-bg: #152D75;
+  --bs-list-group-active-border-color: #152D75;
   display: flex;
   flex-direction: column;
   padding-left: 0;
@@ -4424,7 +4420,7 @@ div.drawio .input-group-sm > button,
   --bs-btn-close-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414'/%3e%3c/svg%3e");
   --bs-btn-close-opacity: 0.5;
   --bs-btn-close-hover-opacity: 0.75;
-  --bs-btn-close-focus-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  --bs-btn-close-focus-shadow: 0 0 0 0.25rem rgba(21, 45, 117, 0.25);
   --bs-btn-close-focus-opacity: 1;
   --bs-btn-close-disabled-opacity: 0.25;
   box-sizing: content-box;
@@ -5682,7 +5678,7 @@ div.drawio .input-group-sm > button,
   background-color: RGBA(var(--bs-primary-rgb), var(--bs-bg-opacity, 1)) !important; }
 
 .text-bg-secondary {
-  color: #fff !important;
+  color: #000 !important;
   background-color: RGBA(var(--bs-secondary-rgb), var(--bs-bg-opacity, 1)) !important; }
 
 .text-bg-success {
@@ -5713,15 +5709,15 @@ div.drawio .input-group-sm > button,
   color: RGBA(var(--bs-primary-rgb), var(--bs-link-opacity, 1)) !important;
   text-decoration-color: RGBA(var(--bs-primary-rgb), var(--bs-link-underline-opacity, 1)) !important; }
   .link-primary:hover, .link-primary:focus {
-    color: RGBA(10, 88, 202, var(--bs-link-opacity, 1)) !important;
-    text-decoration-color: RGBA(10, 88, 202, var(--bs-link-underline-opacity, 1)) !important; }
+    color: RGBA(17, 36, 94, var(--bs-link-opacity, 1)) !important;
+    text-decoration-color: RGBA(17, 36, 94, var(--bs-link-underline-opacity, 1)) !important; }
 
 .link-secondary {
   color: RGBA(var(--bs-secondary-rgb), var(--bs-link-opacity, 1)) !important;
   text-decoration-color: RGBA(var(--bs-secondary-rgb), var(--bs-link-underline-opacity, 1)) !important; }
   .link-secondary:hover, .link-secondary:focus {
-    color: RGBA(86, 94, 100, var(--bs-link-opacity, 1)) !important;
-    text-decoration-color: RGBA(86, 94, 100, var(--bs-link-underline-opacity, 1)) !important; }
+    color: RGBA(255, 226, 53, var(--bs-link-opacity, 1)) !important;
+    text-decoration-color: RGBA(255, 226, 53, var(--bs-link-underline-opacity, 1)) !important; }
 
 .link-success {
   color: RGBA(var(--bs-success-rgb), var(--bs-link-opacity, 1)) !important;
@@ -5734,8 +5730,8 @@ div.drawio .input-group-sm > button,
   color: RGBA(var(--bs-info-rgb), var(--bs-link-opacity, 1)) !important;
   text-decoration-color: RGBA(var(--bs-info-rgb), var(--bs-link-underline-opacity, 1)) !important; }
   .link-info:hover, .link-info:focus {
-    color: RGBA(61, 213, 243, var(--bs-link-opacity, 1)) !important;
-    text-decoration-color: RGBA(61, 213, 243, var(--bs-link-underline-opacity, 1)) !important; }
+    color: RGBA(124, 151, 231, var(--bs-link-opacity, 1)) !important;
+    text-decoration-color: RGBA(124, 151, 231, var(--bs-link-underline-opacity, 1)) !important; }
 
 .link-warning {
   color: RGBA(var(--bs-warning-rgb), var(--bs-link-opacity, 1)) !important;
@@ -17304,7 +17300,7 @@ https://www.docsy.dev/docs/content/lookandfeel/#project-style-files
 .-bg-blue p:not(.p-initial) > a {
   color: #81b3fe; }
   .-bg-blue p:not(.p-initial) > a:hover {
-    color: #0a58ca; }
+    color: #0d1c4a; }
 
 .-text-blue {
   color: #0d6efd; }
@@ -17316,7 +17312,7 @@ https://www.docsy.dev/docs/content/lookandfeel/#project-style-files
 .-bg-indigo p:not(.p-initial) > a {
   color: #85b6fe; }
   .-bg-indigo p:not(.p-initial) > a:hover {
-    color: #0a58ca; }
+    color: #0d1c4a; }
 
 .-text-indigo {
   color: #6610f2; }
@@ -17328,7 +17324,7 @@ https://www.docsy.dev/docs/content/lookandfeel/#project-style-files
 .-bg-purple p:not(.p-initial) > a {
   color: #84b5fe; }
   .-bg-purple p:not(.p-initial) > a:hover {
-    color: #0a58ca; }
+    color: #0d1c4a; }
 
 .-text-purple {
   color: #6f42c1; }
@@ -17340,7 +17336,7 @@ https://www.docsy.dev/docs/content/lookandfeel/#project-style-files
 .-bg-pink p:not(.p-initial) > a {
   color: #81b4fe; }
   .-bg-pink p:not(.p-initial) > a:hover {
-    color: #0a58ca; }
+    color: #0d1c4a; }
 
 .-text-pink {
   color: #d63384; }
@@ -17352,7 +17348,7 @@ https://www.docsy.dev/docs/content/lookandfeel/#project-style-files
 .-bg-red p:not(.p-initial) > a {
   color: #7db1fe; }
   .-bg-red p:not(.p-initial) > a:hover {
-    color: #0a58ca; }
+    color: #0d1c4a; }
 
 .-text-red {
   color: #dc3545; }
@@ -17364,7 +17360,7 @@ https://www.docsy.dev/docs/content/lookandfeel/#project-style-files
 .-bg-orange p:not(.p-initial) > a {
   color: #073b87; }
   .-bg-orange p:not(.p-initial) > a:hover {
-    color: #0a58ca; }
+    color: #0d1c4a; }
 
 .-text-orange {
   color: #fd7e14; }
@@ -17376,7 +17372,7 @@ https://www.docsy.dev/docs/content/lookandfeel/#project-style-files
 .-bg-yellow p:not(.p-initial) > a {
   color: #073982; }
   .-bg-yellow p:not(.p-initial) > a:hover {
-    color: #0a58ca; }
+    color: #0d1c4a; }
 
 .-text-yellow {
   color: #ffc107; }
@@ -17388,7 +17384,7 @@ https://www.docsy.dev/docs/content/lookandfeel/#project-style-files
 .-bg-green p:not(.p-initial) > a {
   color: #b3d2fe; }
   .-bg-green p:not(.p-initial) > a:hover {
-    color: #0a58ca; }
+    color: #0d1c4a; }
 
 .-text-green {
   color: #198754; }
@@ -17400,7 +17396,7 @@ https://www.docsy.dev/docs/content/lookandfeel/#project-style-files
 .-bg-teal p:not(.p-initial) > a {
   color: #063274; }
   .-bg-teal p:not(.p-initial) > a:hover {
-    color: #0a58ca; }
+    color: #0d1c4a; }
 
 .-text-teal {
   color: #20c997; }
@@ -17412,7 +17408,7 @@ https://www.docsy.dev/docs/content/lookandfeel/#project-style-files
 .-bg-cyan p:not(.p-initial) > a {
   color: #06377e; }
   .-bg-cyan p:not(.p-initial) > a:hover {
-    color: #0a58ca; }
+    color: #0d1c4a; }
 
 .-text-cyan {
   color: #0dcaf0; }
@@ -17424,7 +17420,7 @@ https://www.docsy.dev/docs/content/lookandfeel/#project-style-files
 .-bg-black p:not(.p-initial) > a {
   color: white; }
   .-bg-black p:not(.p-initial) > a:hover {
-    color: #0a58ca; }
+    color: #0d1c4a; }
 
 .-text-black {
   color: #000; }
@@ -17436,7 +17432,7 @@ https://www.docsy.dev/docs/content/lookandfeel/#project-style-files
 .-bg-white p:not(.p-initial) > a {
   color: #0d6efd; }
   .-bg-white p:not(.p-initial) > a:hover {
-    color: #0a58ca; }
+    color: #0d1c4a; }
 
 .-text-white {
   color: #fff; }
@@ -17448,7 +17444,7 @@ https://www.docsy.dev/docs/content/lookandfeel/#project-style-files
 .-bg-gray p:not(.p-initial) > a {
   color: #90bdfe; }
   .-bg-gray p:not(.p-initial) > a:hover {
-    color: #0a58ca; }
+    color: #0d1c4a; }
 
 .-text-gray {
   color: #6c757d; }
@@ -17460,34 +17456,34 @@ https://www.docsy.dev/docs/content/lookandfeel/#project-style-files
 .-bg-gray-dark p:not(.p-initial) > a {
   color: #c8deff; }
   .-bg-gray-dark p:not(.p-initial) > a:hover {
-    color: #0a58ca; }
+    color: #0d1c4a; }
 
 .-text-gray-dark {
   color: #343a40; }
 
 .-bg-primary {
   color: #fff;
-  background-color: #0d6efd; }
+  background-color: #152D75; }
 
 .-bg-primary p:not(.p-initial) > a {
-  color: #81b3fe; }
+  color: #bed8fe; }
   .-bg-primary p:not(.p-initial) > a:hover {
-    color: #0a58ca; }
+    color: #0d1c4a; }
 
 .-text-primary {
-  color: #0d6efd; }
+  color: #152D75; }
 
 .-bg-secondary {
-  color: #fff;
-  background-color: #6c757d; }
+  color: #000;
+  background-color: #FFDB03; }
 
 .-bg-secondary p:not(.p-initial) > a {
-  color: #90bdfe; }
+  color: #073880; }
   .-bg-secondary p:not(.p-initial) > a:hover {
-    color: #0a58ca; }
+    color: #0d1c4a; }
 
 .-text-secondary {
-  color: #6c757d; }
+  color: #FFDB03; }
 
 .-bg-success {
   color: #fff;
@@ -17496,22 +17492,22 @@ https://www.docsy.dev/docs/content/lookandfeel/#project-style-files
 .-bg-success p:not(.p-initial) > a {
   color: #b3d2fe; }
   .-bg-success p:not(.p-initial) > a:hover {
-    color: #0a58ca; }
+    color: #0d1c4a; }
 
 .-text-success {
   color: #198754; }
 
 .-bg-info {
   color: #000;
-  background-color: #0dcaf0; }
+  background-color: #5b7de2; }
 
 .-bg-info p:not(.p-initial) > a {
-  color: #06377e; }
+  color: #08449d; }
   .-bg-info p:not(.p-initial) > a:hover {
-    color: #0a58ca; }
+    color: #0d1c4a; }
 
 .-text-info {
-  color: #0dcaf0; }
+  color: #5b7de2; }
 
 .-bg-warning {
   color: #000;
@@ -17520,7 +17516,7 @@ https://www.docsy.dev/docs/content/lookandfeel/#project-style-files
 .-bg-warning p:not(.p-initial) > a {
   color: #073982; }
   .-bg-warning p:not(.p-initial) > a:hover {
-    color: #0a58ca; }
+    color: #0d1c4a; }
 
 .-text-warning {
   color: #ffc107; }
@@ -17532,7 +17528,7 @@ https://www.docsy.dev/docs/content/lookandfeel/#project-style-files
 .-bg-danger p:not(.p-initial) > a {
   color: #7db1fe; }
   .-bg-danger p:not(.p-initial) > a:hover {
-    color: #0a58ca; }
+    color: #0d1c4a; }
 
 .-text-danger {
   color: #dc3545; }
@@ -17544,7 +17540,7 @@ https://www.docsy.dev/docs/content/lookandfeel/#project-style-files
 .-bg-light p:not(.p-initial) > a {
   color: #0d6bf7; }
   .-bg-light p:not(.p-initial) > a:hover {
-    color: #0a58ca; }
+    color: #0d1c4a; }
 
 .-text-light {
   color: #f8f9fa; }
@@ -17556,7 +17552,7 @@ https://www.docsy.dev/docs/content/lookandfeel/#project-style-files
 .-bg-dark p:not(.p-initial) > a {
   color: #dceaff; }
   .-bg-dark p:not(.p-initial) > a:hover {
-    color: #0a58ca; }
+    color: #0d1c4a; }
 
 .-text-dark {
   color: #212529; }
@@ -17568,7 +17564,7 @@ https://www.docsy.dev/docs/content/lookandfeel/#project-style-files
 .-bg-100 p:not(.p-initial) > a {
   color: #0d6bf7; }
   .-bg-100 p:not(.p-initial) > a:hover {
-    color: #0a58ca; }
+    color: #0d1c4a; }
 
 .-text-100 {
   color: #f8f9fa; }
@@ -17580,7 +17576,7 @@ https://www.docsy.dev/docs/content/lookandfeel/#project-style-files
 .-bg-200 p:not(.p-initial) > a {
   color: #0c66ea; }
   .-bg-200 p:not(.p-initial) > a:hover {
-    color: #0a58ca; }
+    color: #0d1c4a; }
 
 .-text-200 {
   color: #e9ecef; }
@@ -17592,7 +17588,7 @@ https://www.docsy.dev/docs/content/lookandfeel/#project-style-files
 .-bg-300 p:not(.p-initial) > a {
   color: #0c61e0; }
   .-bg-300 p:not(.p-initial) > a:hover {
-    color: #0a58ca; }
+    color: #0d1c4a; }
 
 .-text-300 {
   color: #dee2e6; }
@@ -17604,7 +17600,7 @@ https://www.docsy.dev/docs/content/lookandfeel/#project-style-files
 .-bg-400 p:not(.p-initial) > a {
   color: #0b5bd2; }
   .-bg-400 p:not(.p-initial) > a:hover {
-    color: #0a58ca; }
+    color: #0d1c4a; }
 
 .-text-400 {
   color: #ced4da; }
@@ -17616,7 +17612,7 @@ https://www.docsy.dev/docs/content/lookandfeel/#project-style-files
 .-bg-500 p:not(.p-initial) > a {
   color: #094eb4; }
   .-bg-500 p:not(.p-initial) > a:hover {
-    color: #0a58ca; }
+    color: #0d1c4a; }
 
 .-text-500 {
   color: #adb5bd; }
@@ -17628,7 +17624,7 @@ https://www.docsy.dev/docs/content/lookandfeel/#project-style-files
 .-bg-600 p:not(.p-initial) > a {
   color: #90bdfe; }
   .-bg-600 p:not(.p-initial) > a:hover {
-    color: #0a58ca; }
+    color: #0d1c4a; }
 
 .-text-600 {
   color: #6c757d; }
@@ -17640,7 +17636,7 @@ https://www.docsy.dev/docs/content/lookandfeel/#project-style-files
 .-bg-700 p:not(.p-initial) > a {
   color: #b3d2fe; }
   .-bg-700 p:not(.p-initial) > a:hover {
-    color: #0a58ca; }
+    color: #0d1c4a; }
 
 .-text-700 {
   color: #495057; }
@@ -17652,7 +17648,7 @@ https://www.docsy.dev/docs/content/lookandfeel/#project-style-files
 .-bg-800 p:not(.p-initial) > a {
   color: #c8deff; }
   .-bg-800 p:not(.p-initial) > a:hover {
-    color: #0a58ca; }
+    color: #0d1c4a; }
 
 .-text-800 {
   color: #343a40; }
@@ -17664,7 +17660,7 @@ https://www.docsy.dev/docs/content/lookandfeel/#project-style-files
 .-bg-900 p:not(.p-initial) > a {
   color: #dceaff; }
   .-bg-900 p:not(.p-initial) > a:hover {
-    color: #0a58ca; }
+    color: #0d1c4a; }
 
 .-text-900 {
   color: #212529; }
@@ -17676,46 +17672,46 @@ https://www.docsy.dev/docs/content/lookandfeel/#project-style-files
 .-bg-0 p:not(.p-initial) > a {
   color: #dceaff; }
   .-bg-0 p:not(.p-initial) > a:hover {
-    color: #0a58ca; }
+    color: #0d1c4a; }
 
 .-text-0 {
   color: #212529; }
 
 .-bg-1 {
   color: #fff;
-  background-color: #0d6efd; }
+  background-color: #152D75; }
 
 .-bg-1 p:not(.p-initial) > a {
-  color: #81b3fe; }
+  color: #bed8fe; }
   .-bg-1 p:not(.p-initial) > a:hover {
-    color: #0a58ca; }
+    color: #0d1c4a; }
 
 .-text-1 {
-  color: #0d6efd; }
+  color: #152D75; }
 
 .-bg-2 {
-  color: #fff;
-  background-color: #6c757d; }
+  color: #000;
+  background-color: #FFDB03; }
 
 .-bg-2 p:not(.p-initial) > a {
-  color: #90bdfe; }
+  color: #073880; }
   .-bg-2 p:not(.p-initial) > a:hover {
-    color: #0a58ca; }
+    color: #0d1c4a; }
 
 .-text-2 {
-  color: #6c757d; }
+  color: #FFDB03; }
 
 .-bg-3 {
   color: #000;
-  background-color: #0dcaf0; }
+  background-color: #5b7de2; }
 
 .-bg-3 p:not(.p-initial) > a {
-  color: #06377e; }
+  color: #08449d; }
   .-bg-3 p:not(.p-initial) > a:hover {
-    color: #0a58ca; }
+    color: #0d1c4a; }
 
 .-text-3 {
-  color: #0dcaf0; }
+  color: #5b7de2; }
 
 .-bg-4 {
   color: #000;
@@ -17724,7 +17720,7 @@ https://www.docsy.dev/docs/content/lookandfeel/#project-style-files
 .-bg-4 p:not(.p-initial) > a {
   color: #0d6efd; }
   .-bg-4 p:not(.p-initial) > a:hover {
-    color: #0a58ca; }
+    color: #0d1c4a; }
 
 .-text-4 {
   color: #fff; }
@@ -17736,7 +17732,7 @@ https://www.docsy.dev/docs/content/lookandfeel/#project-style-files
 .-bg-5 p:not(.p-initial) > a {
   color: #90bdfe; }
   .-bg-5 p:not(.p-initial) > a:hover {
-    color: #0a58ca; }
+    color: #0d1c4a; }
 
 .-text-5 {
   color: #6c757d; }
@@ -17748,7 +17744,7 @@ https://www.docsy.dev/docs/content/lookandfeel/#project-style-files
 .-bg-6 p:not(.p-initial) > a {
   color: #b3d2fe; }
   .-bg-6 p:not(.p-initial) > a:hover {
-    color: #0a58ca; }
+    color: #0d1c4a; }
 
 .-text-6 {
   color: #198754; }
@@ -17760,7 +17756,7 @@ https://www.docsy.dev/docs/content/lookandfeel/#project-style-files
 .-bg-7 p:not(.p-initial) > a {
   color: #073982; }
   .-bg-7 p:not(.p-initial) > a:hover {
-    color: #0a58ca; }
+    color: #0d1c4a; }
 
 .-text-7 {
   color: #ffc107; }
@@ -17772,7 +17768,7 @@ https://www.docsy.dev/docs/content/lookandfeel/#project-style-files
 .-bg-8 p:not(.p-initial) > a {
   color: #dceaff; }
   .-bg-8 p:not(.p-initial) > a:hover {
-    color: #0a58ca; }
+    color: #0d1c4a; }
 
 .-text-8 {
   color: #212529; }
@@ -17784,46 +17780,46 @@ https://www.docsy.dev/docs/content/lookandfeel/#project-style-files
 .-bg-9 p:not(.p-initial) > a {
   color: #7db1fe; }
   .-bg-9 p:not(.p-initial) > a:hover {
-    color: #0a58ca; }
+    color: #0d1c4a; }
 
 .-text-9 {
   color: #dc3545; }
 
 .-bg-10 {
   color: #fff;
-  background-color: #0d6efd; }
+  background-color: #152D75; }
 
 .-bg-10 p:not(.p-initial) > a {
-  color: #81b3fe; }
+  color: #bed8fe; }
   .-bg-10 p:not(.p-initial) > a:hover {
-    color: #0a58ca; }
+    color: #0d1c4a; }
 
 .-text-10 {
-  color: #0d6efd; }
+  color: #152D75; }
 
 .-bg-11 {
-  color: #fff;
-  background-color: #6c757d; }
+  color: #000;
+  background-color: #FFDB03; }
 
 .-bg-11 p:not(.p-initial) > a {
-  color: #90bdfe; }
+  color: #073880; }
   .-bg-11 p:not(.p-initial) > a:hover {
-    color: #0a58ca; }
+    color: #0d1c4a; }
 
 .-text-11 {
-  color: #6c757d; }
+  color: #FFDB03; }
 
 .-bg-12 {
   color: #000;
-  background-color: #0dcaf0; }
+  background-color: #5b7de2; }
 
 .-bg-12 p:not(.p-initial) > a {
-  color: #06377e; }
+  color: #08449d; }
   .-bg-12 p:not(.p-initial) > a:hover {
-    color: #0a58ca; }
+    color: #0d1c4a; }
 
 .-text-12 {
-  color: #0dcaf0; }
+  color: #5b7de2; }
 
 .td-table:not(.td-initial), .td-content table:not(.td-initial), .td-box table:not(.td-initial) {
   display: block; }
@@ -17876,60 +17872,60 @@ https://www.docsy.dev/docs/content/lookandfeel/#project-style-files
 
 .td-box--1 {
   color: #fff;
-  background-color: #0d6efd; }
+  background-color: #152D75; }
   .td-box--1 .td-arrow-down::before {
     left: 50%;
     margin-left: -30px;
     bottom: -25px;
     border-style: solid;
     border-width: 25px 30px 0 30px;
-    border-color: #0d6efd transparent transparent transparent;
+    border-color: #152D75 transparent transparent transparent;
     z-index: 3;
     position: absolute;
     content: ""; }
 
 .td-box--1 p > a, .td-box--1 span > a {
-  color: #81b3fe; }
+  color: #bed8fe; }
   .td-box--1 p > a:hover, .td-box--1 span > a:hover {
-    color: #9ac2fe; }
+    color: #cbe0fe; }
 
 .td-box--2 {
-  color: #fff;
-  background-color: #6c757d; }
+  color: #000;
+  background-color: #FFDB03; }
   .td-box--2 .td-arrow-down::before {
     left: 50%;
     margin-left: -30px;
     bottom: -25px;
     border-style: solid;
     border-width: 25px 30px 0 30px;
-    border-color: #6c757d transparent transparent transparent;
+    border-color: #FFDB03 transparent transparent transparent;
     z-index: 3;
     position: absolute;
     content: ""; }
 
 .td-box--2 p > a, .td-box--2 span > a {
-  color: #90bdfe; }
+  color: #073880; }
   .td-box--2 p > a:hover, .td-box--2 span > a:hover {
-    color: #a6cafe; }
+    color: #062d66; }
 
 .td-box--3 {
   color: #000;
-  background-color: #0dcaf0; }
+  background-color: #5b7de2; }
   .td-box--3 .td-arrow-down::before {
     left: 50%;
     margin-left: -30px;
     bottom: -25px;
     border-style: solid;
     border-width: 25px 30px 0 30px;
-    border-color: #0dcaf0 transparent transparent transparent;
+    border-color: #5b7de2 transparent transparent transparent;
     z-index: 3;
     position: absolute;
     content: ""; }
 
 .td-box--3 p > a, .td-box--3 span > a {
-  color: #06377e; }
+  color: #08449d; }
   .td-box--3 p > a:hover, .td-box--3 span > a:hover {
-    color: #052c65; }
+    color: #06367e; }
 
 .td-box--4 {
   color: #000;
@@ -18047,60 +18043,60 @@ https://www.docsy.dev/docs/content/lookandfeel/#project-style-files
 
 .td-box--10 {
   color: #fff;
-  background-color: #0d6efd; }
+  background-color: #152D75; }
   .td-box--10 .td-arrow-down::before {
     left: 50%;
     margin-left: -30px;
     bottom: -25px;
     border-style: solid;
     border-width: 25px 30px 0 30px;
-    border-color: #0d6efd transparent transparent transparent;
+    border-color: #152D75 transparent transparent transparent;
     z-index: 3;
     position: absolute;
     content: ""; }
 
 .td-box--10 p > a, .td-box--10 span > a {
-  color: #81b3fe; }
+  color: #bed8fe; }
   .td-box--10 p > a:hover, .td-box--10 span > a:hover {
-    color: #9ac2fe; }
+    color: #cbe0fe; }
 
 .td-box--11 {
-  color: #fff;
-  background-color: #6c757d; }
+  color: #000;
+  background-color: #FFDB03; }
   .td-box--11 .td-arrow-down::before {
     left: 50%;
     margin-left: -30px;
     bottom: -25px;
     border-style: solid;
     border-width: 25px 30px 0 30px;
-    border-color: #6c757d transparent transparent transparent;
+    border-color: #FFDB03 transparent transparent transparent;
     z-index: 3;
     position: absolute;
     content: ""; }
 
 .td-box--11 p > a, .td-box--11 span > a {
-  color: #90bdfe; }
+  color: #073880; }
   .td-box--11 p > a:hover, .td-box--11 span > a:hover {
-    color: #a6cafe; }
+    color: #062d66; }
 
 .td-box--12 {
   color: #000;
-  background-color: #0dcaf0; }
+  background-color: #5b7de2; }
   .td-box--12 .td-arrow-down::before {
     left: 50%;
     margin-left: -30px;
     bottom: -25px;
     border-style: solid;
     border-width: 25px 30px 0 30px;
-    border-color: #0dcaf0 transparent transparent transparent;
+    border-color: #5b7de2 transparent transparent transparent;
     z-index: 3;
     position: absolute;
     content: ""; }
 
 .td-box--12 p > a, .td-box--12 span > a {
-  color: #06377e; }
+  color: #08449d; }
   .td-box--12 p > a:hover, .td-box--12 span > a:hover {
-    color: #052c65; }
+    color: #06367e; }
 
 .td-box--blue {
   color: #fff;
@@ -18370,41 +18366,41 @@ https://www.docsy.dev/docs/content/lookandfeel/#project-style-files
 
 .td-box--primary {
   color: #fff;
-  background-color: #0d6efd; }
+  background-color: #152D75; }
   .td-box--primary .td-arrow-down::before {
     left: 50%;
     margin-left: -30px;
     bottom: -25px;
     border-style: solid;
     border-width: 25px 30px 0 30px;
-    border-color: #0d6efd transparent transparent transparent;
+    border-color: #152D75 transparent transparent transparent;
     z-index: 3;
     position: absolute;
     content: ""; }
 
 .td-box--primary p > a, .td-box--primary span > a {
-  color: #81b3fe; }
+  color: #bed8fe; }
   .td-box--primary p > a:hover, .td-box--primary span > a:hover {
-    color: #9ac2fe; }
+    color: #cbe0fe; }
 
 .td-box--secondary {
-  color: #fff;
-  background-color: #6c757d; }
+  color: #000;
+  background-color: #FFDB03; }
   .td-box--secondary .td-arrow-down::before {
     left: 50%;
     margin-left: -30px;
     bottom: -25px;
     border-style: solid;
     border-width: 25px 30px 0 30px;
-    border-color: #6c757d transparent transparent transparent;
+    border-color: #FFDB03 transparent transparent transparent;
     z-index: 3;
     position: absolute;
     content: ""; }
 
 .td-box--secondary p > a, .td-box--secondary span > a {
-  color: #90bdfe; }
+  color: #073880; }
   .td-box--secondary p > a:hover, .td-box--secondary span > a:hover {
-    color: #a6cafe; }
+    color: #062d66; }
 
 .td-box--success {
   color: #fff;
@@ -18427,22 +18423,22 @@ https://www.docsy.dev/docs/content/lookandfeel/#project-style-files
 
 .td-box--info {
   color: #000;
-  background-color: #0dcaf0; }
+  background-color: #5b7de2; }
   .td-box--info .td-arrow-down::before {
     left: 50%;
     margin-left: -30px;
     bottom: -25px;
     border-style: solid;
     border-width: 25px 30px 0 30px;
-    border-color: #0dcaf0 transparent transparent transparent;
+    border-color: #5b7de2 transparent transparent transparent;
     z-index: 3;
     position: absolute;
     content: ""; }
 
 .td-box--info p > a, .td-box--info span > a {
-  color: #06377e; }
+  color: #08449d; }
   .td-box--info p > a:hover, .td-box--info span > a:hover {
-    color: #052c65; }
+    color: #06367e; }
 
 .td-box--warning {
   color: #000;
@@ -18792,11 +18788,11 @@ https://www.docsy.dev/docs/content/lookandfeel/#project-style-files
   text-shadow: none; }
 
 .navbar-bg-onscroll {
-  background: #0d6efd !important;
+  background: #152D75 !important;
   opacity: inherit; }
 
 .td-navbar {
-  background: #0d6efd;
+  background: #152D75;
   min-height: 4rem;
   margin: 0;
   z-index: 32; }
@@ -18927,7 +18923,7 @@ https://www.docsy.dev/docs/content/lookandfeel/#project-style-files
 #main_navbar .alert {
   background-color: inherit;
   padding: 0;
-  color: #6c757d;
+  color: #FFDB03;
   border: 0;
   font-weight: inherit; }
   #main_navbar .alert::before {
@@ -19239,11 +19235,11 @@ nav.foldable-nav .with-child ul {
     color: var(--bs-alert-link-color); }
   .alert-primary, .pageinfo-primary {
     border-style: solid;
-    border-color: #0d6efd;
+    border-color: #152D75;
     border-width: 0 0 0 4px; }
   .alert-secondary, .pageinfo-secondary {
     border-style: solid;
-    border-color: #6c757d;
+    border-color: #FFDB03;
     border-width: 0 0 0 4px; }
   .alert-success, .pageinfo-success {
     border-style: solid;
@@ -19251,7 +19247,7 @@ nav.foldable-nav .with-child ul {
     border-width: 0 0 0 4px; }
   .alert-info, .pageinfo-info {
     border-style: solid;
-    border-color: #0dcaf0;
+    border-color: #5b7de2;
     border-width: 0 0 0 4px; }
   .alert-warning, .pageinfo-warning {
     border-style: solid;
@@ -19365,8 +19361,8 @@ h6:hover > .td-heading-self-link, .h6:hover > .td-heading-self-link {
     .td-search__input:not(:focus) {
       background: transparent; }
     .td-search__input.form-control:focus {
-      border-color: #f3f8ff;
-      box-shadow: 0 0 0 2px #6ea8fe;
+      border-color: #f3f5f8;
+      box-shadow: 0 0 0 2px #7381ac;
       color: var(--bs-body-color); }
     .td-navbar .td-search__input {
       border: none;
@@ -19607,7 +19603,7 @@ h6:hover > .td-heading-self-link, .h6:hover > .td-heading-self-link {
     .taxonomy-term:hover .taxonomy-count {
       color: var(--bs-body-color-dark); }
   .taxonomy-term:hover::before {
-    background: #0d6efd; }
+    background: #152D75; }
 
 .taxo-text-tags .taxonomy-term {
   background: none;
@@ -19626,7 +19622,7 @@ h6:hover > .td-heading-self-link, .h6:hover > .td-heading-self-link {
   clip-path: none; }
   .taxo-text-tags .taxonomy-term:hover {
     background: none;
-    color: #0d6efd; }
+    color: #152D75; }
     .taxo-text-tags .taxonomy-term:hover .taxonomy-count {
       color: #212529 !important; }
   .taxo-text-tags .taxonomy-term:hover::before {
@@ -19650,7 +19646,7 @@ h6:hover > .td-heading-self-link, .h6:hover > .td-heading-self-link {
   font-size: 0.75em; }
 
 .taxo-text-tags .taxonomy-term:hover .taxonomy-count {
-  color: #0d6efd !important; }
+  color: #152D75 !important; }
 
 .taxo-fruits .taxonomy-term[data-taxonomy-term]::before {
   font-style: normal;
@@ -19695,7 +19691,7 @@ h6:hover > .td-heading-self-link, .h6:hover > .td-heading-self-link {
   clip-path: none; }
   .taxo-fruits .taxonomy-term:hover {
     background: none;
-    color: #0d6efd; }
+    color: #152D75; }
     .taxo-fruits .taxonomy-term:hover .taxonomy-count {
       color: #212529 !important; }
   .taxo-fruits .taxonomy-term:hover::before {
@@ -19819,16 +19815,16 @@ div.drawioframe {
     max-width: calc(100% + 3rem); }
   .tab-body-primary {
     border-style: solid;
-    border-color: #0d6efd; }
+    border-color: #152D75; }
   .tab-body-secondary {
     border-style: solid;
-    border-color: #6c757d; }
+    border-color: #FFDB03; }
   .tab-body-success {
     border-style: solid;
     border-color: #198754; }
   .tab-body-info {
     border-style: solid;
-    border-color: #0dcaf0; }
+    border-color: #5b7de2; }
   .tab-body-warning {
     border-style: solid;
     border-color: #ffc107; }
@@ -19909,5 +19905,26 @@ div.drawioframe {
 Projects can override this file. For details, see:
 https://www.docsy.dev/docs/content/lookandfeel/#project-style-files
 */
+.td-heading-self-link {
+  display: none; }
+
+.td-box .text-center ul {
+  list-style-position: inside;
+  padding-left: 0;
+  margin-left: 0; }
+
+.td-navbar {
+  background-color: #152D75; }
+
+.td-navbar .nav-link,
+.td-navbar .navbar-brand {
+  color: rgba(255, 255, 255, 0.92); }
+
+.td-navbar .nav-link:hover,
+.td-navbar .navbar-brand:hover {
+  color: #ffffff; }
+
+.td-navbar .nav-link.active {
+  color: #FFDB03; }
 
 /*# sourceMappingURL=main.css.map */

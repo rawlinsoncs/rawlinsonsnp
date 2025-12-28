@@ -1,56 +1,104 @@
 ---
-title: Goldydocs
+title: Student Nutrition Program
+description: How the Rawlinson Student Nutrition Program supports students — and how the community can help.
 ---
 
-<style>
-  .td-heading-self-link {
-    display: none;
-  }
-</style>
+{{< blocks/cover
+  title="Student Nutrition Program"
+  image_anchor="center"
+  height="full"
+  background_image="/images/snack-bins.jpg"
+>}}
 
-{{< blocks/cover title="Welcome to Goldydocs: A Docsy Example Project!" image_anchor="top" height="full" >}}
+Providing a daily snack to every student — powered by volunteers, community support, and care.
 
-<a class="btn btn-lg btn-primary me-3 mb-4" href="/docs/">
-  Learn More <i class="fas fa-arrow-alt-circle-right ms-2"></i>
-</a>
-<a class="btn btn-lg btn-secondary me-3 mb-4" href="https://github.com/google/docsy-example">
-  Download <i class="fab fa-github ms-2 "></i>
-</a>
-<p class="lead mt-5">Porridge temperature assessment &mdash; in the cloud!</p>
+{{< blocks/button color="primary" href="/docs/community/" icon="fas fa-arrow-alt-circle-right" >}}
+Learn how the program works
+{{< /blocks/button >}}
 
-{{< blocks/link-down color="info" >}} {{< /blocks/cover >}}
+{{< blocks/button color="secondary" href="#td-block-3" icon="fas fa-hands-helping" >}}
+Get involved
+{{< /blocks/button >}}
+
+{{< blocks/link-down color="light" >}}
+{{< /blocks/cover >}}
 
 {{% blocks/lead color="primary" %}}
 
-Goldydocs provides a single web UI providing visibility into porridge
-temperature, chair size, and bed softness metrics! You can even find out who's
-been eating **your** porridge.
+The Rawlinson Student Nutrition Program (SNP) provides a **daily snack to every student** at the school.
 
-(Sadly, Goldydocs isn't a real project, but you can use this site as an example
-to create your own real websites with [Docsy](https://docsy.dev))
+The program supports student wellbeing, ensures **equitable access to food**, and helps students stay focused and ready to learn.
+
+It is made possible through a combination of public funding, food donations, and **community volunteers**.
 
 {{% /blocks/lead %}}
 
 {{% blocks/section color="white" type="row" %}}
 
-{{% blocks/feature icon="fa-lightbulb" title="New chair metrics!" %}}
+{{% blocks/feature icon="fa-apple-alt" title="What students receive" %}}
 
-The Goldydocs UI now shows chair size metrics by default.
+Each snack day includes:
+- **Vegetables or fruit**
+- **Whole grains, protein foods, or milk / alternatives**
 
-Please follow this space for updates!
-
-{{% /blocks/feature %}}
-
-{{% blocks/feature icon="fab fa-github" title="Contributions welcome!" url="https://github.com/google/docsy-example" %}}
-
-We do a [Pull Request](https://github.com/google/docsy-example/pulls)
-contributions workflow on **GitHub**. New users are always welcome!
+All snacks follow school board and City of Toronto nutrition guidelines.
 
 {{% /blocks/feature %}}
 
-{{% blocks/feature icon="fab fa-x-twitter" title="Follow us on X!" url="https://x.com/docsydocs" %}}
+{{% blocks/feature icon="fa-users" title="A community effort" %}}
 
-For announcement of latest features etc.
+The Snack Program is largely **volunteer-run**, with support from school staff and community partners.
+
+Even occasional or short-term help makes a meaningful difference.
+
+{{% /blocks/feature %}}
+
+{{% blocks/feature icon="fa-heart" title="Why it matters" %}}
+
+A reliable daily snack helps:
+- Reduce barriers for families
+- Support student focus and wellbeing
+- Build a caring school community
+
+{{% /blocks/feature %}}
+
+{{% /blocks/section %}}
+
+{{% blocks/section color="light" type="row" id="get-involved" %}}
+
+{{% blocks/feature icon="fa-hands-helping" title="Volunteer" %}}
+
+Help with:
+- Packing snacks
+- Organizing dietary substitutions
+- Moving and storing food
+- Program coordination
+
+{{< blocks/button color="primary" href="https://docs.google.com/forms/d/e/1FAIpQLSc9vXzS8igf1ctnruGFHIYfP6KN_mPStFYAoPrZKV8o9Lds9g/viewform?usp=header" icon="fas fa-hands-helping" >}}
+Sign up to volunteer
+{{< /blocks/button >}}
+
+{{% /blocks/feature %}}
+
+{{% blocks/feature icon="fa-donate" title="Donate" %}}
+
+Financial contributions help:
+- Supplement donated food
+- Purchase items that meet nutrition guidelines
+- Fill gaps when donated items are unavailable
+
+{{< blocks/button color="primary" href="https://tfss.ca/donate/schoolsites-snp/" icon="fas fa-donate" >}}
+Make a donation
+{{< /blocks/button >}}
+
+{{% /blocks/feature %}}
+
+{{% blocks/feature icon="fa-bullhorn" title="Champion the program" %}}
+
+Support the program by:
+- Sharing accurate information
+- Encouraging understanding and goodwill
+- Thanking volunteers and school staff
 
 {{% /blocks/feature %}}
 
@@ -58,12 +106,18 @@ For announcement of latest features etc.
 
 {{% blocks/section type="row text-center" %}}
 
-# This is the second section
+## Want more details?
+
+If you’d like to learn more about how the program works — including dietary needs, allergies, funding, and frequently asked questions — visit our in-depth guide.
+
+{{< blocks/button color="primary" href="/docs/community/" icon="fas fa-arrow-alt-circle-right" >}}
+Student Nutrition Program — Family Guide
+{{< /blocks/button >}}
 
 {{% /blocks/section %}}
 
-{{% blocks/section type="row text-center" %}}
+{{% blocks/section type="row text-center" color="white" %}}
 
-# This is the another section with center alignment
+Thank you for supporting the students at Rawlinson.
 
 {{% /blocks/section %}}

@@ -1,0 +1,26 @@
+{{- /*
+Docsy-style button shortcode.
+
+Usage:
+{{< blocks/button color="primary" href="/path/" icon="fas fa-arrow-right" >}}Label{{< /blocks/button >}}
+
+Params:
+- href   (required)
+- color  (optional): primary | secondary | light | dark | info | success | warning | danger
+- icon   (optional): Font Awesome classes, e.g. "fas fa-arrow-alt-circle-right"
+- size   (optional): lg | sm (default: lg)
+*/ -}}
+
+{{- $href := .Get "href" -}}
+{{- if not $href -}}
+  {{- errorf "blocks/button shortcode requires href параметр (href)" -}}
+{{- end -}}
+
+{{- $color := .Get "color" | default "primary" -}}
+{{- $size := .Get "size"  | default "lg" -}}
+{{- $icon := .Get "icon"  | default "" -}}
+
+<a class="btn btn-{{ $size }} btn-{{ $color }} me-3 mb-4" href="{{ $href }}">
+  {{ .Inner | markdownify }}
+  {{- if $icon -}} <i class="{{ $icon }} ms-2"></i>{{- end -}}
+</a>

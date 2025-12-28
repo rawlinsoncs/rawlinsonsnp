@@ -23,6 +23,11 @@ title = 'Rawlinson Student Nutrition Program'
   [caches.images]
     dir = ':cacheDir/images'
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
 [[menu.main]]
   name = "Rawlinson Community School"
   weight = 50

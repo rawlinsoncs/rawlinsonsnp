@@ -1,0 +1,35 @@
+/*
+Projects can override this file. For details, see:
+https://www.docsy.dev/docs/content/lookandfeel/#project-style-files
+*/
+
+.td-heading-self-link {
+  display: none;
+}
+
+.td-box .text-center ul {
+  list-style-position: inside;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+// Navbar: match logo blue
+.td-navbar {
+  background-color: #152D75;
+}
+
+// Navbar links: white, strong contrast
+.td-navbar .nav-link,
+.td-navbar .navbar-brand {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.td-navbar .nav-link:hover,
+.td-navbar .navbar-brand:hover {
+  color: #ffffff;
+}
+
+// Optional: highlight active section with logo yellow
+.td-navbar .nav-link.active {
+  color: #FFDB03;
+}
