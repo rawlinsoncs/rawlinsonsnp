@@ -19908,7 +19908,11 @@ https://www.docsy.dev/docs/content/lookandfeel/#project-style-files
 .td-heading-self-link {
   display: none; }
 
-.td-box .text-center ul {
+.td-cover-block.td-overlay--dark::before {
+  opacity: 0.65;
+  /* default can be a bit light depending on image */ }
+
+.td-home .td-box .text-center ul {
   list-style-position: inside;
   padding-left: 0;
   margin-left: 0; }
