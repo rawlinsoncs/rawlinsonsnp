@@ -14,6 +14,12 @@ description = 'How the Rawlinson Student Nutrition Program works and when teache
 
 ---
 
+## Snack Program Reporting Form
+
+Go to the [Teacher-specific Snack Program Reporting Form](https://docs.google.com/forms/d/e/1FAIpQLSdRoEtHOad9SSLyxjuC_P0UjtdTEw9Yn8sncGmdXfXXrlgtTw/viewform?usp=header)
+
+---
+
 ## Teacher Quick Start
 
 **If you only read one section, read this.**
@@ -34,8 +40,7 @@ description = 'How the Rawlinson Student Nutrition Program works and when teache
 - A parent is looking for contact information for the Snack Program. We maintain a **separate community-facing page** for families.
 
 **How to contact us**
-- A short reporting **form is preferred**
-- Email is always OK if the form does not capture what you need
+- Use the ✴️ [Teacher-specific Snack Program Reporting Form](https://docs.google.com/forms/d/e/1FAIpQLSdRoEtHOad9SSLyxjuC_P0UjtdTEw9Yn8sncGmdXfXXrlgtTw/viewform?usp=header) ✴️.
 
 ---
 
