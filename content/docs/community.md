@@ -127,6 +127,116 @@ Every form of support helps keep the program running smoothly.
 
 ---
 
+## How Snack Distribution Works (Behind the Scenes)
+
+> **The Student Nutrition Program serves approximately 720 students every school day, five days a week.**
+
+Providing a daily snack at this scale requires coordination, care, and consistency. Below is a look at how the program runs each day and where volunteers are involved.
+
+---
+
+### Daily Snack Distribution (Morning)
+
+Snack distribution happens every school day and is designed to be efficient, predictable, and finished before classes begin.
+
+**Around 8:20 a.m., volunteers arrive at the school.**  
+They collect the snack bins used the previous day and lay them out in order by classroom. If a bin is missing, it is replaced so every class is accounted for.
+
+**All bins are sanitized.**  
+Before any food is added, bins are cleaned and prepared for use.
+
+**Snacks for the day are gathered from storage.**  
+Food is retrieved from the pantry or refrigerators. On some days, fruit or vegetables need to be washed or portioned by weight before distribution.
+
+**Snacks are carefully portioned by classroom.**  
+Items are counted out based on class size. Depending on what is served, this may include:
+
+- An apple and a cheese string  
+- A yogurt or fruit cup, **plus a disposable spoon for every student**  
+- Bread sticks with WOW butter, alongside fruit  
+
+Quantities are adjusted on the fly if supplies are limited, ensuring every class receives what they need.
+
+**Dietary alternatives are added.**  
+Students requiring substitutions receive them in **clearly labeled bags placed inside classroom bins**. These alternatives vary depending on the snack being served that day.
+
+**Bins are distributed.**  
+- Kindergarten bins are delivered directly to classrooms  
+- All other bins are placed on tables near the office for teacher pickup  
+
+**Cleanup happens immediately.**  
+Cardboard is broken down and placed in recycling, and the space is reset.
+
+The goal is for all distribution to be complete by **approximately 9:15 a.m.**, so snacks are ready when classes need them.
+
+Volunteers are onboarded before helping, and **no food handling certification is required**. [Complete the volunteer form for more information](https://docs.google.com/forms/d/e/1FAIpQLSc9vXzS8igf1ctnruGFHIYfP6KN_mPStFYAoPrZKV8o9Lds9g/viewform?usp=header).
+
+---
+
+### Moving Food Deliveries (A Separate Volunteer Role)
+
+Moving food deliveries is a distinct task from daily distribution and is often handled by different volunteers.
+
+**What this role involves**
+
+Food deliveries are signed for by office staff but arrive on the **main floor**. Volunteers then move items to appropriate storage locations, including:
+
+- The pantry on the second floor  
+- Refrigerators in the lunchroom for dairy and other perishables  
+
+Deliveries can include **dozens of cases** containing items such as:
+
+- Apples or other fruit  
+- Yogurt tubes  
+- Granola bars or cereal products  
+- Individually packaged snacks  
+
+Cases can range in weight from **a few pounds up to approximately 45 pounds**.
+
+**Delivery timing varies by vendor**
+
+- **TFSS**  
+  - Deliveries are moving to Wednesdays between **11:00 a.m. and 1:00 p.m.**  
+  - Arrival times can be unpredictable and may fall outside the delivery window  
+
+- **Healthy Selections**  
+  - Delivery dates are selected by the SNP coordinator  
+  - Deliveries typically arrive within the agreed-upon window  
+
+- **Millennium Bakery**  
+  - Delivers reliably on Wednesday mornings  
+
+Because dairy and other perishable items need to be refrigerated as soon as possible, timing matters.
+
+Volunteers helping with deliveries are onboarded, and **no food handling certification is required**. [Complete the volunteer form for more information](https://docs.google.com/forms/d/e/1FAIpQLSc9vXzS8igf1ctnruGFHIYfP6KN_mPStFYAoPrZKV8o9Lds9g/viewform?usp=header).
+
+---
+
+### Why This Matters
+
+Providing a daily snack to **over 700 students** helps reduce hunger, supports focus in the classroom, and contributes to a calmer learning environment for everyone.
+
+The process is well thought out and reliable. It works because of community involvement.
+
+Volunteering offers:
+- A meaningful way to support students  
+- A first-hand look at how Rawlinson operates day to day  
+- A tangible way to strengthen the school community  
+
+This is not about fixing a broken system — it is about **showing up for students together**.
+
+---
+
+### Interested in Helping?
+
+If you are curious about volunteering — whether with daily distribution, moving deliveries, or behind-the-scenes support — learning more is a great first step.
+
+You do not need special training, just a willingness to help.
+
+[Complete the volunteer form for more information](https://docs.google.com/forms/d/e/1FAIpQLSc9vXzS8igf1ctnruGFHIYfP6KN_mPStFYAoPrZKV8o9Lds9g/viewform?usp=header).
+
+---
+
 ## Frequently Asked Questions
 
 ### Can families request specific snack items?
