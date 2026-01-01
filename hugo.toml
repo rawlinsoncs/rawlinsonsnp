@@ -2,6 +2,15 @@ baseURL = 'https://rawlinsoncs.github.io/rawlinsonsnp/'
 languageCode = 'en-us'
 title = 'Rawlinson Student Nutrition Program'
 
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    weight = 1
+    contentDir = "content"
+
 [module]
   proxy = "direct"
   # uncomment line below for temporary local development of module
