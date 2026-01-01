@@ -4,6 +4,8 @@ type = "docs"
 weight = 1
 title = 'Teacher Guidance'
 description = 'How the Rawlinson Student Nutrition Program works and when teachers should reach out.'
+toc_hide = true
+hide_summary = true
 +++
 ## Quick Navigation
 - [Teacher Quick Start](#teacher-quick-start)
@@ -37,7 +39,7 @@ Go to the [Teacher-specific Snack Program Reporting Form](https://docs.google.co
 
 - A parent has **verbally asked** to lift an allergy concern. Allergy changes must come through the office or in writing from a guardian.
 - A student has a **one-off dislike** of a snack.
-- A parent is looking for contact information for the Snack Program. We maintain a **separate community-facing page** for families.
+- A parent is looking for contact information for the Snack Program. We maintain a [**separate community-facing page**](../community/) for families.
 
 **How to contact us**
 - Use the ✴️ [Teacher-specific Snack Program Reporting Form](https://docs.google.com/forms/d/e/1FAIpQLSdRoEtHOad9SSLyxjuC_P0UjtdTEw9Yn8sncGmdXfXXrlgtTw/viewform?usp=header) ✴️.
