@@ -29,7 +29,11 @@ The Rawlinson Student Nutrition Program (SNP) provides a **daily snack to every 
 
 The program supports student wellbeing, ensures **equitable access to food**, and helps students stay focused and ready to learn.
 
-It is made possible through a combination of public funding, food donations, and **community volunteers**.
+It is made possible through a combination of public funding, food donations, and **community volunteers**. The program depends on an engaged parent community — without ongoing volunteer and financial support, it cannot operate at the scale our students need.
+
+{{< blocks/button color="secondary" href="#td-block-3" icon="fas fa-hands-helping" >}}
+Get involved
+{{< /blocks/button >}}
 
 {{% /blocks/lead %}}
 
@@ -77,6 +81,7 @@ Help with:
 - Organizing dietary substitutions
 - Moving and storing food
 - Program coordination
+- Requires as little as 20 minutes per week
 
 {{% /blocks/feature %}}
 

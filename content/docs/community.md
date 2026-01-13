@@ -216,7 +216,7 @@ Volunteers helping with deliveries are onboarded, and **no food handling certifi
 
 Providing a daily snack to **over 700 students** helps reduce hunger, supports focus in the classroom, and contributes to a calmer learning environment for everyone.
 
-The process is well thought out and reliable. It works because of community involvement.
+The process is well thought out and reliable. It works because of community involvement. Maintaining this level of support for over 700 students requires consistent volunteer participation and funding throughout the school year.
 
 Volunteering offers:
 - A meaningful way to support students  
