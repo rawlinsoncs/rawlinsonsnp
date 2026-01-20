@@ -271,3 +271,74 @@ Please contact the **school office** for questions related to:
 - Program participation
 
 This helps ensure information is shared safely and consistently.
+
+- **Additional questions about the TDSB Student Nutrition program**
+  Please contact Lynne Martens, the TDSB Nutrition Liaison Officer for Rawlinson at 416-659-5633 or lynne.martens@tdsb.on.ca. 
+  General inquiries about the program can be made to studentnutrition@tdsb.on.ca.
+
+- **TDSB Student Nutrition**  
+  https://www.tdsb.on.ca/Elementary-School/Supporting-You/Student-Nutrition
+
+- **Toronto Public Health**
+  https://toronto.ca/community-people/health-wellness-care/health-programs-advice/student-nutrition-program
+
+- **Student Nutrition Ontario - Toronto**
+  https://www.studentnutritionontariotoronto.ca/
+
+---
+
+### What type of food will be served in the student nutrition program?
+
+**At Rawlinson, for 2025-2026 we offer an AM Snack**
+
+Students will be offered a selection of healthy food based on the Student Nutrition Guidelines (2021). See
+summary by Toronto Public Health [here](toronto.ca/wp-content/uploads/2017/11/962f-tph-SNPguideline-fs-eng-2017-09-05.pdf)
+
+Depending on the nutrition program provided at the school (Morning Meal, Breakfast, Lunch or Snack
+AM/PM) the following foods will be available:
+
+- **Morning Meal includes:**
+  - Vegetables and/or fruit
+  - Whole grain product
+  - Protein item
+- **Breakfast or Lunch includes:**
+  - Vegetables and/or fruit
+  - Whole grain product
+- **Snack AM or PM includes:** (Currently offered at Rawlinson)
+  - Vegetables and/or fruit
+  - Whole grain product OR protein item
+
+---
+
+### What if my child has food allergies?
+
+Every effort will be made to control the school environment to minimize the exposure of identified allergens as part of a prevention plan. For example, all schools are peanut-free. Despite these efforts to reduce the risk of exposure to zero, the Board cannot ensure an allergen-free school environment.
+
+Schools with a nutrition program request that parents submit an allergy/food restriction form at the beginning of the school year so that accommodations can be made. For instance, if a child is allergic to milk, that child is not served milk. If it is an anaphylactic allergy, the bin with food going into that student’s classroom is clearly labelled, kept separate and sanitized daily. Every classroom bin has a class list attached with student allergies identified so that teachers and volunteers are aware of children with allergies. The program coordinator will have access to allergy and food restriction information gathered by the school. Menus are developed with food allergies in mind and ensure that the food preparation area is sanitized daily according to Toronto Public Health Food Safety standards.
+
+---
+
+### How is the food prepared for the student nutrition program?
+
+The program coordinator and/or volunteers prepare the menu and ensure that your child’s food is delivered and served in a safe, clean environment that adheres to Toronto Public Health sanitary standards, including proper refrigeration and daily sanitizing of food preparation areas. Program coordinators must complete training in food safety and student nutrition guidelines. A Toronto Public Health Inspector visits your school’s food preparation space to ensure it complies with all safety regulations and a Toronto Public Health Dietitian visits your school to review and support the best menu possible.
+
+---
+
+### How is my school’s student nutrition program funded?
+
+Provincial and municipal funding cover a small portion of the program costs. Contributions from parents and/or fundraising are necessary to make the program sustainable and meet funding criteria. Your school/Local Nutrition Program Committee may suggest an amount for parents to contribute based on the cost needed to run your school’s program. Nutrition programs are universal and available for all students, regardless of a family’s ability to contribute financially. For information on other funding sources, please contact one of our Nutrition Liaison Officers listed below.
+
+---
+
+### Why does our school need a student nutrition program?
+
+The Toronto District School Board, through its Nutrition Foundation Statement, recognizes the direct relationship between healthy nutrition and academic achievement of students. Research shows that children who participate in student nutrition programs are better able to concentrate, retain and apply information and show positive behavior in the classroom. Through nutrition programs students are more likely to develop eating habits which promote health and help prevent chronic diseases. Student nutrition programs improve learning outcomes, create a sense of belonging and connection, and address hunger in a non-stigmatizing way. They also unlock opportunities for curriculum connections, student leadership, food literacy and hands-on learning, as well as community engagement. They are beneficial for all school communities. Student nutrition is part of our school’s plan to support student success and well-being.
+
+---
+
+### How do I volunteer with the student nutrition program?
+
+Volunteers are vital to the success of school nutrition programs. To volunteer at Rawlinson, we have setup a [volunteer intake form](https://docs.google.com/forms/d/e/1FAIpQLSc9vXzS8igf1ctnruGFHIYfP6KN_mPStFYAoPrZKV8o9Lds9g/viewform?usp=header). If this doesn't address your concernt, please speak with your school principal. To ensure the safety of all students, the Toronto District School Board requires police reference checks for all adult volunteers. 
+
+Schools may also welcome secondary school students who wish to volunteer toward their 40 hours of community service required to graduate.
+
