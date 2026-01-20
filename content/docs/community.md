@@ -65,6 +65,21 @@ Specific items vary depending on availability, seasonality, and food safety requ
 
 ---
 
+### Why This Matters
+
+Providing a daily snack to **over 700 students** helps reduce hunger, supports focus in the classroom, and contributes to a calmer learning environment for everyone.
+
+The process is well thought out and reliable. It works because of community involvement. Maintaining this level of support for over 700 students requires consistent volunteer participation and funding throughout the school year.
+
+Volunteering offers:
+- A meaningful way to support students  
+- A first-hand look at how Rawlinson operates day to day  
+- A tangible way to strengthen the school community  
+
+This is not about fixing a broken system — it is about **showing up for students together**.
+
+---
+
 ## Nutrition Standards
 
 All snacks follow nutrition standards set by the TDSB and the City of Toronto.
@@ -209,21 +224,6 @@ Cases can range in weight from **a few pounds up to approximately 45 pounds**.
 Because dairy and other perishable items need to be refrigerated as soon as possible, timing matters.
 
 Volunteers helping with deliveries are onboarded, and **no food handling certification is required**. [Complete the volunteer form for more information](https://docs.google.com/forms/d/e/1FAIpQLSc9vXzS8igf1ctnruGFHIYfP6KN_mPStFYAoPrZKV8o9Lds9g/viewform?usp=header).
-
----
-
-### Why This Matters
-
-Providing a daily snack to **over 700 students** helps reduce hunger, supports focus in the classroom, and contributes to a calmer learning environment for everyone.
-
-The process is well thought out and reliable. It works because of community involvement. Maintaining this level of support for over 700 students requires consistent volunteer participation and funding throughout the school year.
-
-Volunteering offers:
-- A meaningful way to support students  
-- A first-hand look at how Rawlinson operates day to day  
-- A tangible way to strengthen the school community  
-
-This is not about fixing a broken system — it is about **showing up for students together**.
 
 ---
 
