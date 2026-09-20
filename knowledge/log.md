@@ -1,5 +1,11 @@
 # Update Log
 
+## 2026-09-20 (nutrition standards)
+- **Update**: Rewrote `program/nutrition-standards.md` from primary sources (MCCSS SNP Nutrition Guidelines 2020 + City of Toronto adaptation) — added yogurt sugar threshold (≤ 11 g/100 g), bran as a qualifying first ingredient, milk-fat limits, milk rules, juice prohibition, pro-rating rule; linked the full extraction in `research/tdsb-snp-product-requirements.md`.
+
+## 2026-09-20 (research — product requirements)
+- **Research**: Added `research/tdsb-snp-product-requirements.md` — full extraction of SNP product choice rules from MCCSS 2020 provincial guidelines and City of Toronto/TPH adaptations: all numeric thresholds (sugar, sodium, milk fat), per-category serve/do-not-serve tables, label-reading rules, morning-snack structure, reconciliation with school teacher-guidance claims (all three numbers confirmed, with noted omissions).
+
 ## 2026-09-20 (prompt fix)
 - **Update**: Fixed CSV column order in `prompts/extract-delivery.md` to match the Deliveries sheet — header is now `Item,Unit,PackSize,Delivery Date,Notes` (sheet columns A, B, C, J, K), with a note that columns D–I are computed or maintained in-sheet.
 

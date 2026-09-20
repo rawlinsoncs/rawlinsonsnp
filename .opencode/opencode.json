@@ -1,0 +1,22 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "permission": {
+    "bash": {
+      "mkdir *": "allow",
+      "git add *": "allow",
+      "git commit *": "allow",
+      "git push *": "allow",
+      "git restore *": "allow",
+      "hugo *": "allow",
+      "rm -rf public*": "allow",
+      "bash knowledge/validate.sh *": "allow",
+      "okflint *": "allow",
+      "command -v *": "allow",
+      "code *": "allow"
+    },
+    "write": {
+      "*.sh": "allow",
+      ".opencode/**": "allow"
+    }
+  }
+}
