@@ -1,5 +1,10 @@
 # Update Log
 
+## 2026-09-21 (menu builder)
+- **Creation**: Added `prompts/generate-menu.md` — the menu-builder agent prompt: takes a pantry spreadsheet export (including future-dated rows as pending supply), drafts the Menu per serving week against the TDSB two-component rule and ~720-student sufficiency, assigns items by perishability, and suggests gap-fill orders (grains held for Millennium, fruit/vegetables from Healthy Selections with live pricing and cost per child per day). Email extraction and calendar publication remain separate services by design.
+- **Update**: Fixed hardcoded `Fruit` category in `prompts/tfss-extraction-formatting.md` — TFSS ships all components; the category is now inferred per product (dairy → Protein, whole-grain → Grain), with a Protein example row added.
+- **Update**: Restructured `operations/pantry-inventory.md` — vendor table split into Donors (TFSS Bridging the Nutrition Gap, contents vendor-chosen) and Suppliers (Healthy Selections, Millennium Bakery grains-only with ≥1 week lead, Costco); documented the supply-lag model (week N deliveries serve week N+1, Millennium same-day) and Safety stock; softened the TFSS Wednesday claim (dates drift with school holidays); noted future-dated rows as the pending-order record.
+
 ## 2026-09-20 (nutrition standards)
 - **Update**: Rewrote `program/nutrition-standards.md` from primary sources (MCCSS SNP Nutrition Guidelines 2020 + City of Toronto adaptation) — added yogurt sugar threshold (≤ 11 g/100 g), bran as a qualifying first ingredient, milk-fat limits, milk rules, juice prohibition, pro-rating rule; linked the full extraction in `research/tdsb-snp-product-requirements.md`.
 

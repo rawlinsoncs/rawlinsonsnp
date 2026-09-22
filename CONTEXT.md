@@ -20,6 +20,18 @@ _Avoid_: combo item, two-group item
 A labeled individual bag replacing a Menu item for a student with an allergy or restriction; prepared day-of by the allergy system, independent of Menu planning.
 _Avoid_: allergy menu, alternate snack
 
+**Serving week**:
+The school week a Menu covers; supplied by deliveries landing in the prior week, plus same-day Millennium baked goods on Wednesday.
+_Avoid_: delivery week (when meaning the week being planned)
+
+**Safety stock**:
+Shelf-stable items deliberately held in the pantry as a buffer against spoilage and supply failures.
+_Avoid_: surplus, spare stock
+
+**Cost per child per day**:
+The cost of one child's Snack on a school day: the sum of each served item's cost divided by its servings.
+_Avoid_: cost per student, per-child spend
+
 **Donation**:
 Food supplied by a vendor on the vendor's own initiative; the program does not choose the contents.
 _Avoid_: free delivery, subsidized order

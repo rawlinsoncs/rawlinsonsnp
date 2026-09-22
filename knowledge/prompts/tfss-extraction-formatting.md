@@ -4,7 +4,7 @@ title: TFSS Data Extraction and Formatting
 description: Prompt for generating ICS calendar events and a tab-delimited list from TFSS delivery structured data.
 tags: [snp, prompt, automation, tfss, ics, calendar]
 status: stable
-generated: { by: human:aaron, at: 2026-09-20T00:00:00Z }
+generated: { by: opencode/glm-5.3, at: 2026-09-21T00:00:00Z }
 stale_after: 2027-03-20T00:00:00Z
 sources:
   - id: import
@@ -42,7 +42,7 @@ Using the information provided in the context, please perform the following:
    - `0`
    - `0`
    - `Additional_Info` (from package description)
-   - `Fruit` (always "Fruit" for these entries)
+   - Category — **inferred per product** against the Deliveries sheet's four-label vocabulary (Fruit, Grain, Protein, Alternative): produce and dried fruit → `Fruit`; whole-grain baked goods, crackers, breadsticks, and granola bars → `Grain`; dairy items (yogurt, cheese portions) → `Protein`. TFSS ships all components — never hardcode a single category.
    - `TFSS` (static value)
    - `Date` (the corresponding delivery date for each product)
 
@@ -65,6 +65,7 @@ Using the information provided in the context, please perform the following:
    ```
    Apple (Mini) 188 7 0 0 0 138-170 units/case (individual, loose) Fruit TFSS 2026-04-29
    Raisin (Individual) 120 6 0 0 0 30g each, 120 each/cs Fruit TFSS 2026-04-29
+   Cheese Portions - Marble 100 8 0 0 0 100 units/case, 21 g/units, (individual) Protein TFSS 2026-04-29
    ```
 
 **Context:**
