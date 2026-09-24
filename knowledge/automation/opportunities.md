@@ -4,7 +4,7 @@ title: Remaining Automation Opportunities
 description: Manual SNP workflows identified as candidates for automation beyond delivery extraction and WhatsApp digests.
 tags: [snp, automation, backlog]
 status: stable
-generated: { by: opencode/glm-5.3-flash, at: 2026-09-20T00:00:00Z }
+generated: { by: opencode/glm-5.3, at: 2026-09-21T14:00:00Z }
 stale_after: 2027-03-20T00:00:00Z
 sources:
   - id: zk-note
@@ -29,4 +29,5 @@ Beyond [Delivery Extraction](./delivery-extraction.md) and [WhatsApp Digest Auto
 ## Menu Calendar Synchronization & Inventory Alerting
 
 - *Pain Point*: Disconnect between pantry stock, perishability dates, and menu calendar updates.
-- *Opportunity*: Automated inventory threshold alerts when stock is low or near expiration, automatically proposing menu adjustments and updating the embedded Google Calendar.
+- *Status (2026-09-21)*: Menu proposal is now handled — see [Menu Building](./menu-building.md), trialed live against the published AvailableAsOf view on 2026-09-21.
+- *Remaining opportunity*: Publishing the approved Menu to the embedded Google Calendar (a separate calendar-publisher tool), and automated inventory threshold alerts when stock is low or near expiration.

@@ -24,9 +24,12 @@ microservices can replace them one at a time without moving the seams.
 - **Spreadsheet formulas compute the menu** — rejected: menu planning needs
   judgment (perishability, variety, gap-fill sourcing) that formulas cannot
   express and should not silently decide.
-- **Live Healthy Selections pricing** — accepted as the menu builder's one
-  non-sheet input, needed for order suggestions and cost per child per day;
-  prices are never stored in the knowledge bundle.
+- **Healthy Selections pricing via a price service** — a Docker web service
+  on the program machine (alongside the WhatsApp bot) maintains the vendor
+  login and serves current catalog prices on demand; the menu builder
+  queries it at run time. Rejected: anonymously fetching the live catalog
+  (the shop is login-gated) and a stored price list (goes stale — only
+  historic prices belong in the knowledge bundle).
 
 ## Consequences
 
@@ -38,3 +41,11 @@ microservices can replace them one at a time without moving the seams.
   populates future-dated rows.
 - Future services (WhatsApp digest, calendar publisher) integrate via the
   sheet and the calendar, not via each other.
+- Reference data (vendor catalog prices) flows from small adapter services,
+  not through the sheet: the bus carries state (orders, inventory), adapters
+  carry reference data. Future vendors plug in as additional adapters.
+- No spreadsheet schema additions: the stock AvailableAsOf view is the
+  availability API. Deliberate limitations — no per-batch dates, no netting
+  of the current week's unrecorded distributions — are absorbed by the
+  coordinator's review and the prompt's flags rather than by new sheets (a
+  Menu/MenuInput schema was considered and rejected after a live trial).

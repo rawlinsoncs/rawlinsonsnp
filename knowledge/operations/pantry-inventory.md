@@ -4,7 +4,7 @@ title: Pantry and Inventory Tracking
 description: Two-floor storage system with vendor deliveries tracked into a central Google Sheets pantry log; Donors supply on their own initiative and Suppliers are ordered to fill menu gaps.
 tags: [snp, pantry, inventory, vendors]
 status: stable
-generated: { by: opencode/glm-5.3, at: 2026-09-21T00:00:00Z }
+generated: { by: opencode/glm-5.3, at: 2026-09-21T14:00:00Z }
 stale_after: 2027-03-20T00:00:00Z
 sources:
   - id: family-guide
@@ -37,8 +37,8 @@ Vendors split into two roles (see the domain glossary in `CONTEXT.md`). **Donors
 
 | Supplier | Lead time | Notes |
 |----------|-----------|-------|
-| Healthy Selections | Preferred order ~10–15 days before delivery; quicker turns possible — next delivery date shown at https://healthyselections.ca/ | Ordered items with custom portion sizing; confirmations arrive in the program inbox |
-| Millennium Bakery | Order ≥ 1 week before the Wednesday delivery | **Grains only**; baked the morning of delivery — same-day unrefrigerated, up to a week refrigerated |
+| Healthy Selections | Preferred order ~10–15 days before delivery; quicker turns possible | Ordered items with custom portion sizing; confirmations arrive in the program inbox. The catalog is **login-gated** — prices are served by a Docker price service that maintains the program login; the next-delivery-date banner at https://healthyselections.ca/ is public |
+| Millennium Bakery | Order ≥ 1 week before the Wednesday delivery | **Grains only**; baked the morning of delivery — same-day unrefrigerated, up to a week refrigerated. Menu and prices are public at https://www.millenniumbakehouse.com/menu — cross-referenced when drafting gap-fill orders |
 | Costco Business Delivery | Scheduled, confirmed via email | Direct online purchases; confirmations contain item numbers, pack sizes, delivery dates |
 
 ## Supply lag

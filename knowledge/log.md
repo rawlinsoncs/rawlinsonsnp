@@ -1,5 +1,17 @@
 # Update Log
 
+## 2026-09-21 (bundle consistency)
+- **Creation**: Added `automation/menu-building.md` — the automation concept for the menu builder (weekly loop, boundaries per ADR 0001, degraded mode), listed in `automation/index.md`.
+- **Update**: `automation/opportunities.md` — the menu-calendar item is now partially realized (menu proposal trialed live 2026-09-21); what remains is calendar publishing and inventory threshold alerts.
+- **Update**: `operations/pantry-inventory.md` — recorded vendor access facts found during the trial: the HS catalog is login-gated (prices served by the planned Docker price service) with a public delivery banner; Millennium's menu and prices are public.
+- **Update**: Bundle-root `index.md` prompts description now includes menu generation; `prompts/generate-menu.md` gained the verified TDSB school-calendar URL.
+
+## 2026-09-21 (menu builder simplification)
+- **Update**: Simplified `prompts/generate-menu.md` after its first live trial run: input is the single published AvailableAsOf CSV (no raw-sheet fetches, no delta math), one serving week per run, the public Millennium menu added as the grain gap-fill cross-reference, and `Multi` accepted as the sheet's fifth category label for dual-component items. Trial findings (zero-Distributions overstatement, unverifiable per-batch dates) became prompt flags instead of schema changes — the Menu/MenuInput sheets were considered and rejected; ADR 0001 amended accordingly.
+
+## 2026-09-21 (menu builder inputs)
+- **Update**: Revised `prompts/generate-menu.md` inputs — the pantry sheets are read from Google Sheets publish-to-web CSV URLs (phone-first, no manual exports); Healthy Selections catalog and prices come from a planned Docker price service maintaining the vendor login, with a degraded no-pricing mode and the public delivery banner fetched directly; exact order costs land post-order from the order-confirmation email.
+
 ## 2026-09-21 (menu builder)
 - **Creation**: Added `prompts/generate-menu.md` — the menu-builder agent prompt: takes a pantry spreadsheet export (including future-dated rows as pending supply), drafts the Menu per serving week against the TDSB two-component rule and ~720-student sufficiency, assigns items by perishability, and suggests gap-fill orders (grains held for Millennium, fruit/vegetables from Healthy Selections with live pricing and cost per child per day). Email extraction and calendar publication remain separate services by design.
 - **Update**: Fixed hardcoded `Fruit` category in `prompts/tfss-extraction-formatting.md` — TFSS ships all components; the category is now inferred per product (dairy → Protein, whole-grain → Grain), with a Protein example row added.

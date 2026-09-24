@@ -4,7 +4,7 @@ title: Generate Menu
 description: Agent prompt that builds the weekly snack Menu from a pantry spreadsheet export — draft menu, gap analysis, and suggested gap-fill orders with cost per child per day.
 tags: [snp, prompt, automation, menu, pantry]
 status: stable
-generated: { by: opencode/glm-5.3, at: 2026-09-21T00:00:00Z }
+generated: { by: opencode/glm-5.3, at: 2026-09-21T14:00:00Z }
 stale_after: 2027-03-21T00:00:00Z
 sources:
   - id: context-glossary
@@ -45,53 +45,61 @@ the repo's `CONTEXT.md` — use those terms exactly.
 
 ## Input
 
-The user supplies:
+Fetch each run:
 
-1. **Deliveries sheet export** — columns A–K: Item, Unit, PackSize,
-   ServingsReceived, Spent, Remaining, ServingsProjected, Category, Vendor,
-   Delivery Date, Notes. **Include future-dated rows** — they are pending
-   orders and scheduled Donations, and they are your forward-looking supply.
-2. **Distributions sheet export** — Date, Item, QtyOut.
-3. **Waste sheet export** — Date, Item, QtyWaste, Reason (dates may be blank).
-4. **Student count** — default ~720 (2026–27 school year) unless stated.
+1. **AvailableAsOf sheet** — published CSV (Google Sheets publish-to-web,
+   one-time setup; the coordinator sets the *As of date* cutoff to the
+   Monday of the serving week being planned). Columns: Item, Category,
+   Available as of, Deliveries, Distributions, Waste. The sheet's own
+   formulas do the availability math and include future-dated deliveries up
+   to the cutoff — pending orders and scheduled Donations are your
+   forward-looking supply. Do not recompute availability from raw sheets.
+2. **Healthy Selections catalog and prices** from the HS price service — a
+   Docker web service on the program machine that maintains the vendor
+   login and serves current prices on demand. If it is unreachable, run
+   degraded: omit prices, suggest from the gap list only, and flag
+   "no pricing". The next-delivery-date banner is public at
+   https://healthyselections.ca/ and can be fetched directly.
+3. **The Millennium Bakehouse menu** — https://www.millenniumbakehouse.com/menu
+   is public; cross-reference it when drafting grain gap-fill orders.
+4. **The TDSB school-year calendar** (https://www.tdsb.on.ca/About-Us/School-Year-Calendar)
+   — to know holidays and PD days.
+5. **Student count** — default ~720 (2026–27 school year) unless stated.
 
-You also fetch live (you are web-capable):
-
-5. The Healthy Selections catalog and next-delivery-date banner from
-   https://healthyselections.ca/ — quote prices as-of the run date.
-6. The TDSB school-year calendar — to know holidays and PD days.
-
-If no spreadsheet export was provided, halt and ask for it. Never invent
-rows, items, prices, or dates.
+If the published sheet URL is not available, halt and ask for it.
+Never invent rows, items, prices, or dates.
 
 ## Computations
 
 ### Supply
 
-- Per-row servings: `Unit × PackSize` (ignore the sheet's computed columns;
-  recompute from A–C so future rows count too).
-- **Available now** per item = servings of rows dated ≤ today −
-  Σ Distributions − Σ Waste.
-- **Pending** per item = servings of future-dated rows. Pending rows are
-  supply, never gaps — this is the guard against double-ordering.
+- Availability comes from the AvailableAsOf view as-is — one row per item:
+  Item, Category, servings available as of the cutoff. Its formulas already
+  include pending deliveries dated on or before the cutoff, so forward
+  supply is visible with no delta math. Trust it: a gap is only a gap if
+  the view shows the component short — this is the double-ordering guard.
+- The view carries no dates or vendors, so perishability windows can't be
+  date-verified: schedule by item nature (fresh produce and dairy early in
+  the serving week, shelf-stable flexible) and flag any placement you
+  cannot verify against a window.
+- If Distributions are all zero or stale, the view overstates availability
+  by the current week's unrecorded consumption (~school days × student
+  count per component). Flag this and state the assumption you used.
 - Exclude non-food rows (serving supplies such as spoons, packaging).
-- Flag data anomalies (missing or swapped dates, `Rebalance` notes,
-  `Inventory` vendor rows) but include them in the stock math — they are
-  ledger corrections.
 
 ### Serving weeks
 
 - A serving week is a school week (Mon–Fri) minus holidays and PD days per
   the TDSB calendar. Verify each week; a holiday week has fewer serving days
   and needs proportionally fewer servings.
-- Plan from the next week with no drafted Menu through the last week reached
-  by pending rows. Mark weeks beyond confirmed Gap-fill Purchases as
-  **provisional**.
+- Plan **one serving week per run** — the week the coordinator is
+  purchasing for. Longer horizons are already in the sheet as future-dated
+  rows and will surface in later runs.
 - Supply mapping: serving week W is fed by deliveries dated in week W−1,
-  plus Millennium rows dated Wednesday of week W (baked that morning, served
-  same day), plus carry-over stock. Always use actual dates from the sheet —
-  TFSS delivers *generally* on Wednesdays but dates drift with school
-  holidays and other factors; never assume a weekday.
+  plus Millennium goods delivered Wednesday of week W (baked that morning,
+  served same day), plus carry-over stock. TFSS delivers *generally* on
+  Wednesdays but dates drift with school holidays and other factors; never
+  assume a weekday — use actual dates from the delivery emails.
 
 ### Completeness
 
@@ -101,8 +109,8 @@ Each school day needs, school-wide:
 - one **whole grain, protein, or dairy** component —
 
 each with pooled servings ≥ student count. Category comes from the sheet's
-Category column (Fruit, Grain, Protein, Alternative; dairy items are
-Protein). Rules:
+Category column (Fruit, Grain, Protein, Alternative, Multi; dairy items are
+Protein; Multi marks Dual-component items). Rules:
 
 - Prefer **one item per component** per day; pool multiple items of the same
   component only when needed for sufficiency.
@@ -125,17 +133,21 @@ Protein). Rules:
 ### Gap-fill
 
 - **Grain gaps** → hold for the **Millennium** order (Millennium offers
-  grains only; order ≥ 1 week before the target Wednesday). For each held
-  gap, state the Millennium order-by date and check the HS fallback: if
-  Millennium declines, the HS banner delivery date must still precede the
-  serving day — if it does not, flag the gap **urgent: decide now**.
+  grains only; order ≥ 1 week before the target Wednesday). Cross-reference
+  the public Millennium menu (see Input) for the pick: muffins are the
+  established order, in flavors that clear the do-not-serve list (no
+  chocolate chip — chocolate is prohibited). For each held gap, state the
+  Millennium order-by date and check the HS fallback: if Millennium
+  declines, the HS banner delivery date must still precede the serving
+  day — if it does not, flag the gap **urgent: decide now**.
 - **Fruit/vegetable gaps** (and any non-Millennium-eligible gap) → suggested
-  **Healthy Selections** order from the live catalog:
+  **Healthy Selections** order from the price service catalog:
   - Match catalog items to the sheet's canonical Item names; flag new items
     the sheet has never carried.
   - Cases = needed servings ÷ servings-per-case, **rounded up** — never down.
-  - Line prices as-of the run date; report the order total (no budget
-    ceiling is encoded — the coordinator judges).
+  - Line prices from the price service as-of the run date (omitted and
+    flagged in degraded mode); report the order total (no budget ceiling is
+    encoded — the coordinator judges).
   - The banner next-delivery date must precede the serving week; flag
     conflicts.
 - **Costco** may be cheaper for some bulk items — note it as a manual
@@ -144,7 +156,8 @@ Protein). Rules:
 ### Cost per child per day
 
 Per school day: Σ over served items of (price ÷ servings). Donations and
-existing stock contribute $0; Gap-fill items use live HS prices. Report per
+existing stock contribute $0; Gap-fill items use price-service prices.
+Exact costs land post-order from the order-confirmation email. Report per
 day and rolled up per serving week.
 
 ## Output format
@@ -172,10 +185,12 @@ supply.
 
 - Every serving day in every planned week has both components at ≥ student
   count, or appears in the gap analysis.
-- No gap is suggested for order twice (pending rows were treated as supply).
+- No gap is suggested for order twice (the view's inclusion of pending
+  deliveries was trusted).
 - No perishable is scheduled beyond its window without a flag.
-- Cases rounded up; order totals and per-child costs computed from live
-  prices; no fabricated prices or items.
+- Cases rounded up; order totals and per-child costs computed from
+  price-service prices (or omitted and flagged in degraded mode); no
+  fabricated prices or items.
 - Safety stock was drawn on only when a day could not otherwise be covered
   (and flagged if so).
 - School days verified against the TDSB calendar.
