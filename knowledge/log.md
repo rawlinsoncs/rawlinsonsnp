@@ -1,5 +1,18 @@
 # Update Log
 
+## 2026-09-25 (menu builder — coverage scope, stock-first)
+- **Update**: `prompts/generate-menu.md` — runs now take coverage scope from the coordinator: which school weeks between the last recorded Distributions and the serving week are already covered by their own plans/orders (new Input item; ask if unstated, never assume either way). The stale-Distributions correction applies only to weeks the coordinator says are uncovered. Added the stock-first rule to Gap-fill: plannable stock above the reserve floor is used before any purchase, since gap-fill adds cost and storage load. Fixes a failure mode where assumed intervening-week consumption pushed available stock (e.g., breadsticks, Melba toast) out of the plan and inflated the HS order.
+
+## 2026-09-25 (perishability — ask, don't assume)
+- **Update**: `prompts/generate-menu.md` — perishables whose delivery date/window is unknown must now be resolved by asking the coordinator (when it arrives, whether the window matters) before inclusion or exclusion; silent assumptions prohibited, validation checklist updated.
+- **Update**: `operations/pantry-inventory.md` — added Per-item delivery notes; grape tomatoes are delivered the Wednesday prior to their distribution week, so they land in-window for their serving week.
+
+## 2026-09-25 (safety stock reserve)
+- **Policy**: Quantified the Safety stock as a standing reserve — two school days' worth of granola bars (shelf-stable grain) and two of raisins or apple squeeze packs (shelf-stable fruit), ≈1,440 servings each at ~720 students — for day-of cover when a perishable Menu item is found spoiled or unusable. Updated `operations/pantry-inventory.md` (reserve policy), `prompts/generate-menu.md` (floor treated as unavailable for planning, replenishment via HS gap-fill, validation check, flags), and `operations/volunteer-workflows.md` (day-of fallback with WhatsApp drawdown report).
+
+## 2026-09-24 (product assessment — Madegood Mornings)
+- **Research**: Added `research/madegood-mornings-oat-bars-tdsb-snp-assessment.md` — per-flavour TDSB SNP criteria evaluation of MadeGood Mornings Organic Baked Oat Cups (Apple Crumble, Berry Vanilla, Banana Chocolate Chip) against MCCSS 2020 whole grain thresholds; data verified against manufacturer (madegoodfoods.ca) and retailer (well.ca). Apple Crumble and Berry Vanilla pass; Banana Chocolate Chip is Do Not Serve (contains chocolate).
+
 ## 2026-09-21 (bundle consistency)
 - **Creation**: Added `automation/menu-building.md` — the automation concept for the menu builder (weekly loop, boundaries per ADR 0001, degraded mode), listed in `automation/index.md`.
 - **Update**: `automation/opportunities.md` — the menu-calendar item is now partially realized (menu proposal trialed live 2026-09-21); what remains is calendar publishing and inventory threshold alerts.

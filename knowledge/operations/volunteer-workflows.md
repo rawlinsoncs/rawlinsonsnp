@@ -4,7 +4,7 @@ title: Volunteer Workflows
 description: Onboarding requirements and the daily morning snack distribution and delivery-moving workflows.
 tags: [snp, volunteers, workflow]
 status: stable
-generated: { by: opencode/glm-5.3-flash, at: 2026-09-20T00:00:00Z }
+generated: { by: opencode/kimi-k3, at: 2026-09-25T14:35:20Z }
 stale_after: 2027-03-20T00:00:00Z
 sources:
   - id: family-guide
@@ -34,6 +34,8 @@ sources:
 4. **Dietary Substitution Bagging**: Labeled substitution bags are added to specific classroom bins per the [Dietary Accommodations policy](../program/dietary-accommodations.md).
 5. **Bin Delivery**: Kindergarten bins are delivered directly to kindergarten classrooms; Grade 1–8 bins are placed on tables outside the main office by **9:15 AM** for teacher pickup.
 6. **Cleanup**: Cardboard boxes are broken down for recycling, and the prep area is reset.
+
+**Day-of perishable failure**: if the Menu's perishable item is found spoiled or unusable during prep, replace that component from the Safety stock reserve — granola bars for the grain side, raisins or apple squeeze packs for the fruit side (two school days of each are held; see [Pantry and Inventory](./pantry-inventory.md)). Report the drawdown in the [WhatsApp group](../communication/whatsapp-coordination.md) so it is logged in the pantry sheet and replenished by the next gap-fill order.
 
 ## Moving Food Deliveries
 

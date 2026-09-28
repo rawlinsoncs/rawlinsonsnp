@@ -4,7 +4,7 @@ title: Generate Menu
 description: Agent prompt that builds the weekly snack Menu from a pantry spreadsheet export — draft menu, gap analysis, and suggested gap-fill orders with cost per child per day.
 tags: [snp, prompt, automation, menu, pantry]
 status: stable
-generated: { by: opencode/glm-5.3, at: 2026-09-21T14:00:00Z }
+generated: { by: opencode/kimi-k3, at: 2026-09-25T17:27:37Z }
 stale_after: 2027-03-21T00:00:00Z
 sources:
   - id: context-glossary
@@ -19,6 +19,10 @@ sources:
   - id: coordinator-session
     resource: scope: coordinator design session 2026-09-20/21
     title: Coordinator clarifications — vendor roles, supply lag, perishability, ordering cadence
+    author: human:aaron
+  - id: coordinator-2026-09-25
+    resource: scope: coordinator clarification 2026-09-25
+    title: Unknown perishability windows — ask the coordinator, do not assume
     author: human:aaron
 ---
 
@@ -65,6 +69,11 @@ Fetch each run:
 4. **The TDSB school-year calendar** (https://www.tdsb.on.ca/About-Us/School-Year-Calendar)
    — to know holidays and PD days.
 5. **Student count** — default ~720 (2026–27 school year) unless stated.
+6. **Coverage** — which school weeks between the latest recorded
+   Distributions and the serving week are already covered by their own
+   plans or orders. The cutoff marks the serving week, but says nothing
+   about coverage of the weeks before it. If the coordinator hasn't said,
+   ask before computing gaps; never assume coverage either way.
 
 If the published sheet URL is not available, halt and ask for it.
 Never invent rows, items, prices, or dates.
@@ -80,11 +89,17 @@ Never invent rows, items, prices, or dates.
   the view shows the component short — this is the double-ordering guard.
 - The view carries no dates or vendors, so perishability windows can't be
   date-verified: schedule by item nature (fresh produce and dairy early in
-  the serving week, shelf-stable flexible) and flag any placement you
-  cannot verify against a window.
-- If Distributions are all zero or stale, the view overstates availability
-  by the current week's unrecorded consumption (~school days × student
-  count per component). Flag this and state the assumption you used.
+  the serving week, shelf-stable flexible). When a perishable's delivery
+  date or window is unknown and the placement decision depends on it,
+  **stop and ask the coordinator** — when the item was or will be delivered
+  and whether they care about its window — before including or excluding
+  it. Never silently assume a window; flags in the final report are only
+  for what stays unresolved after asking.
+- If Distributions are all zero or stale relative to the cutoff, the view
+  overstates availability by unrecorded consumption — but subtract it only
+  for school weeks the coordinator says are NOT already covered (see
+  Input). For each uncovered week, subtract ~school days × student count
+  per component. Record the coverage answer in the flags.
 - Exclude non-food rows (serving supplies such as spoons, packaging).
 
 ### Serving weeks
@@ -126,12 +141,20 @@ Protein; Multi marks Dual-component items). Rules:
 - Millennium baked goods: same-day unrefrigerated, up to a week refrigerated.
 - Shelf-stable items are flexible; **Safety stock** (shelf-stable pantry
   reserve) is deliberately held as a buffer — do not build the plan to burn
-  it down. Perishable surplus, by contrast, should be prioritized early.
+  it down. The reserve floor is **two school days of granola bars and two
+  school days of shelf-stable fruit (raisins or apple squeeze packs)** —
+  ≈ 2 × student count servings each — held for day-of perishable failures;
+  treat floor servings as unavailable when assigning days, and flag any plan
+  that would dip below it. Perishable surplus, by contrast, should be
+  prioritized early.
 - Flag any placement outside its window and any perishable scheduled more
   than a week past its delivery.
 
 ### Gap-fill
 
+- **Stock first** — plannable stock above the reserve floor is always used
+  before purchasing: a Gap-fill Purchase adds cost and storage load, so it
+  covers only what stock cannot.
 - **Grain gaps** → hold for the **Millennium** order (Millennium offers
   grains only; order ≥ 1 week before the target Wednesday). Cross-reference
   the public Millennium menu (see Input) for the pick: muffins are the
@@ -152,6 +175,11 @@ Protein; Multi marks Dual-component items). Rules:
     conflicts.
 - **Costco** may be cheaper for some bulk items — note it as a manual
   alternative, but never draft a Costco order.
+- **Safety stock replenishment** — if the shelf-stable reserve (granola
+  bars; raisins or apple squeeze packs) is below its two-day floor, add
+  replenishment quantities to the HS suggestion to restore the floor,
+  reported separately from serving-week gaps. Millennium baked goods are
+  perishable and never count toward the reserve.
 
 ### Cost per child per day
 
@@ -174,7 +202,7 @@ One section per serving week, then a summary:
    price, line total, order total, banner delivery date, covers-through).
 4. **Flags** — single-item days, out-of-window placements, provisional
    weeks, new/unmapped items, anomalies, banner conflicts, holidays/PD days,
-   urgent gaps.
+   urgent gaps, reserve-floor drawdowns.
 5. **Summary** — weeks planned, total order cost, week cost-per-child range.
 
 Placed orders return to the spreadsheet as future-dated rows (the
@@ -187,12 +215,18 @@ supply.
   count, or appears in the gap analysis.
 - No gap is suggested for order twice (the view's inclusion of pending
   deliveries was trusted).
-- No perishable is scheduled beyond its window without a flag.
+- No perishable is scheduled beyond its window without a flag, and no
+  perishable was excluded on an assumed window — unknown windows were
+  resolved with the coordinator first.
 - Cases rounded up; order totals and per-child costs computed from
   price-service prices (or omitted and flagged in degraded mode); no
   fabricated prices or items.
 - Safety stock was drawn on only when a day could not otherwise be covered
-  (and flagged if so).
+  (and flagged if so); the plan leaves the two-day reserve floor (granola
+  bars; raisins or apple squeeze packs) intact, or flags the breach and adds
+  replenishment to the gap-fill suggestion.
+- Coverage of weeks outside the serving week came from the coordinator,
+  not from an assumption in either direction.
 - School days verified against the TDSB calendar.
 
 Begin once the spreadsheet export is provided.
