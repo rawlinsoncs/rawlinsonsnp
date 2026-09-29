@@ -26,6 +26,7 @@ Pinned in `.tool-versions` (asdf) and in CI: Hugo **Extended** 0.153.2, Dart Sas
 - `layouts/` and `assets/scss/` — Docsy overrides; project files win over the theme when placed at the same path. Brand colors are the school palette in `assets/scss/_variables_project.scss`.
 - `knowledge/` — OKF v0.2 bundle. Follow the maintenance workflow in `knowledge/README.md`: non-reserved `.md` files need YAML frontmatter with a non-empty `type`; update `generated` (and `verified` only when a human actually reviewed); add a dated entry to `log.md` (newest first); then run `validate.sh`. Load the repo-local `okf-open-knowledge-format` skill before doing OKF work.
 - `docs/adr/` — architecture decisions (ADR 0001: the pantry spreadsheet is the integration bus between the program's services).
+- `services/` — Docker services for the program machine (not part of the Hugo build). `services/hs-prices/setup.sh` is the rerunnable wizard that captures the pantry CSV URL and provisions the Healthy Selections login profile; specs live in `.scratch/hs-price-service/`.
 - `CONTEXT.md` — the domain vocabulary (Menu, Snack, Donation, Gap-fill Purchase, Donor vs Supplier, Distribution Volunteer). Use these exact terms in site content and avoid the "Avoid" alternatives listed there.
 
 ## Menu planning runs
