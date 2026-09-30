@@ -1,6 +1,12 @@
 # Spec: HS price service setup wizard
 
-Status: ready-for-agent
+Status: done (run successfully 2026-09-30; all three stages passed)
+
+Outcome: `.env` carries the pantry CSV URL, CDP/web URLs, and profile dir;
+the authenticated profile is provisioned at `services/hs-prices/profile`.
+Its verification run surfaced the finding that reshaped the service spec:
+`/products.json` is anonymously readable — see ADR 0002. The wizard is kept
+as the dormant fallback's re-login path.
 
 ## Problem Statement
 

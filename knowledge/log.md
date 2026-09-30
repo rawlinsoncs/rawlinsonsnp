@@ -1,5 +1,8 @@
 # Update Log
 
+## 2026-09-30 (HS catalog is anonymously readable)
+- **Update**: `operations/pantry-inventory.md` — corrected the vendor access fact found during the price-service setup wizard's verification run: HS storefront pages are login-gated, but Shopify's `/products.json` returns the full catalog with prices anonymously (190 products). Decision recorded in ADR 0002: the price service reads the endpoint anonymously; the Chromium login profile and wizard (`services/hs-prices/setup.sh`) are retained as the dormant fallback.
+
 ## 2026-09-25 (menu builder — coverage scope, stock-first)
 - **Update**: `prompts/generate-menu.md` — runs now take coverage scope from the coordinator: which school weeks between the last recorded Distributions and the serving week are already covered by their own plans/orders (new Input item; ask if unstated, never assume either way). The stale-Distributions correction applies only to weeks the coordinator says are uncovered. Added the stock-first rule to Gap-fill: plannable stock above the reserve floor is used before any purchase, since gap-fill adds cost and storage load. Fixes a failure mode where assumed intervening-week consumption pushed available stock (e.g., breadsticks, Melba toast) out of the plan and inflated the HS order.
 

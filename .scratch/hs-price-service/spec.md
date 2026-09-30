@@ -14,15 +14,19 @@ phone-first constraint. The program machine already runs a fleet of Docker
 services; today there is no endpoint anywhere that answers "what does HS
 currently sell, at what price?"
 
+> **2026-09-30 update (ADR 0002):** only the HTML storefront is gated;
+> `/products.json` answers anonymously with the full catalog. The problem
+> stands; the assumed constraint does not.
+
 ## Solution
 
 A small Dockerized HTTP service on the program machine that serves the
-current HS catalog as JSON on demand. It reuses the persistent authenticated
-browser profile provisioned by the setup wizard (ticket 01): on request, it
-launches headless Chromium against the mounted profile, pulls the catalog,
-and returns items with prices and a freshness timestamp. Login expiry is a
-first-class, machine-checkable signal so the menu builder's degraded mode
-(gap list only, no prices) triggers on evidence. This is the first vendor
+current HS catalog as JSON on demand. Its read path is the anonymous Shopify
+`/products.json` endpoint (found readable without a login during the ticket
+01 verification run — see ADR 0002): on request, it fetches the endpoint,
+normalizes the result, and returns items with prices and a freshness
+timestamp. The Chromium profile + wizard from ticket 01 are retained as the
+documented fallback if the endpoint is ever gated. This is the first vendor
 adapter under ADR 0001: adapters carry reference data (prices), the sheet
 carries state (orders, inventory) — the two never mix.
 
@@ -68,17 +72,21 @@ carries state (orders, inventory) — the two never mix.
     so a downed container degrades the run to a gap list rather than
     blocking menu planning.
 
+> **2026-09-30 update (ADR 0002):** the read path is anonymous; stories 4,
+> 9, and the login half of 14 are superseded — there is no session to expire
+> in this adapter. The wizard remains as the dormant fallback's re-login
+> path.
+
 ## Implementation Decisions
 
 - Placement: `services/hs-prices/` in this repo (decided with the
   coordinator). Hugo is unaffected — it builds `content/` only.
-- Stack: Node + Playwright in a single container, matching the machine's
-  existing Node-based container precedent (the Baileys WhatsApp bot). Each
-  fetch launches headless Chromium against the mounted persistent profile
-  (`services/hs-prices/profile`, created by the wizard), reads the catalog
-  in-session, and exits. No always-on browser, no cross-container CDP; the
-  profile lock is safe because the wizard stops its container on exit and
-  fetches are short-lived.
+- Stack: Node in a single container, matching the machine's existing
+  Node-based container precedent (the Baileys WhatsApp bot). Each fetch is a
+  plain HTTPS GET of `https://healthyselections.ca/products.json?limit=250`
+  — no browser, no Playwright, no profile volume. (The wizard-provisioned
+  Chromium profile stays on disk as the fallback reader per ADR 0002; the
+  wizard's `verify-login.cjs` demonstrates that read.)
 - Endpoint contract (the vendor-adapter shape; future suppliers implement
   the same):
   - `GET /health` → `{ status: "ok" | "login_expired" | "upstream_error",
@@ -86,23 +94,26 @@ carries state (orders, inventory) — the two never mix.
   - `GET /catalog` → `{ fetchedAt, source: "healthyselections.ca",
     items: [{ title, variantTitle, priceCad, sku, bodyText }] }`
   - Failure semantics: `503` + `{ status: "login_expired", remedy: "re-run
-    services/hs-prices/setup.sh" }` when the session is dead; `502` on other
-    upstream failures. `fetchedAt` is always the real fetch time.
-- Catalog read mechanism: prefer Shopify's structured product JSON; if the
-  gate blocks it, read product pages inside the authenticated browser
-  context — either way the HTTP contract above is unchanged. **The spike
-  (blocked by ticket 01) verifies which path works and captures the response
-  fixtures used by the tests.**
+    services/hs-prices/setup.sh" }` is **reserved for session-based
+    adapters** — this adapter has no session and never emits it; it answers
+    `502` + `{ status: "upstream_error" }` on fetch/parse failures (including
+    the endpoint becoming gated, which is how a tightened gate surfaces).
+    `fetchedAt` is always the real fetch time.
+- Catalog read mechanism: **decided 2026-09-30 (ADR 0002)** — anonymous
+  `/products.json` fetch, verified during the ticket 01 run (190 products,
+  prices present, no login). The login-gated assumption came from probing
+  the HTML storefront (`/collections/all`), which is gated; the JSON
+  endpoint is not.
 - Freshness: in-memory cache with a short TTL (default 15 minutes,
   env-configurable) — "real time as needed" without repeated vendor hits.
-- No persistence and no database: nothing is written except the shared
-  profile volume. Prices are never stored in the knowledge bundle; historic
-  prices accrue from order-confirmation emails via the extraction service.
+- No persistence and no database: nothing is written. Prices are never
+  stored in the knowledge bundle; historic prices accrue from
+  order-confirmation emails via the extraction service.
 - The delivery-date banner stays out of this service: it is public and the
   menu builder fetches it directly.
 - Binds localhost only; no auth on the endpoints, so no LAN exposure.
-- Config comes from the same `.env` the wizard writes (profile path, port,
-  cache TTL); `.env` remains gitignored.
+- Config comes from the same `.env` the wizard writes (port, cache TTL);
+  `.env` remains gitignored.
 - Canonical-name mapping is the menu builder's job, not the service's: the
   service returns raw vendor naming (per the trial's finding that the sheet
   is the vocabulary owner).
@@ -110,15 +121,16 @@ carries state (orders, inventory) — the two never mix.
 ## Testing Decisions
 
 - Exactly one seam, at the highest point: the service's HTTP API. Tests feed
-  the upstream reader stubbed fixtures — recorded during the spike from real
-  responses (a logged-in catalog page and a logged-out redirect) — and
+  the upstream reader stubbed fixtures — a real `/products.json` capture
+  (anonymous `curl`, no login needed) plus a malformed-body case — and
   assert endpoint behavior: `200` with normalized items + freshness;
-  login-expired fixture → `503 login_expired`; malformed upstream → `502`.
-- Only external behavior is tested: no tests of browser wiring or parsing
-  internals; parsing correctness is covered fixture-in → JSON-out at the
-  seam.
+  malformed/upstream-down → `502 upstream_error`. (The `503 login_expired`
+  path is contract-reserved and untested here — this adapter has no
+  session.)
+- Only external behavior is tested: no tests of fetch or parsing internals;
+  parsing correctness is covered fixture-in → JSON-out at the seam.
 - A live smoke script (not CI): hits the real service on the machine; run
-  after deploys and re-logins.
+  after deploys.
 - Prior art: none — this is the first code in the repo. The AGENTS.md
   verification bar (clean hugo build, zero validate.sh FAIL lines) is
   unaffected because the service lives outside `content/` and `knowledge/`.
@@ -126,8 +138,9 @@ carries state (orders, inventory) — the two never mix.
 
 ## Out of Scope
 
-- The setup wizard (ticket 01 — its own spec; this service is blocked by it).
-- The spike (blocked by ticket 01; this service is informed by it).
+- The setup wizard (ticket 01 — its own spec; done 2026-09-30).
+- The spike (resolved by ADR 0002: the read path is anonymous
+  `/products.json`; no browser-based reader is built).
 - The menu builder prompt (exists at `knowledge/prompts/generate-menu.md`).
 - Other vendor adapters (Costco, future suppliers) — the contract
   anticipates them; they are not built here.
@@ -139,11 +152,12 @@ carries state (orders, inventory) — the two never mix.
 
 ## Further Notes
 
-- Blocking edges: ticket 01 (setup wizard → the authenticated profile) and
-  the spike (verifies the authenticated catalog read and captures fixtures).
-- Session expiry cadence is empirical (~weeks); the wizard is the re-login
-  path and `/health` makes expiry observable to the coordinator's existing
-  dashboard.
+- Blocking edges: **resolved.** Ticket 01 done (wizard run 2026-09-30,
+  profile provisioned and verified); the spike's mechanism question is
+  settled by ADR 0002 (anonymous `/products.json`), so no spike gates this
+  build — fixtures are an anonymous `curl` away.
+- The dormant login profile will expire unused (~weeks); nothing depends on
+  it, and re-running the wizard revives it if the endpoint is ever gated.
 - If the machine's services are compose-managed, ship a compose file with a
   restart policy matching the other containers.
 - Publishing note: `gh` auth on this machine holds an invalid token

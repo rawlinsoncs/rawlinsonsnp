@@ -1,3 +1,5 @@
 _vendor
 public/
 .env
+# Chromium profile with the live HS session cookies (services/hs-prices)
+services/hs-prices/profile/

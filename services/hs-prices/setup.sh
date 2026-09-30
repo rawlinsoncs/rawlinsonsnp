@@ -187,26 +187,38 @@ finish() {
 # HS price service setup wizard.
 # Spec: .scratch/hs-price-service/issues/01-setup-wizard.md
 #
-# Provisions everything the HS price service (and its spike) needs:
+# Provisions the program's vendor-facing config:
 #   1. the published pantry-sheet CSV URL, verified and saved to .env
 #   2. a persistent, authenticated Chromium profile for healthyselections.ca
+#      (dormant fallback per ADR 0002)
 #   3. proof the login works (a real item + price), via CDP
 #
 # The login session persists in the mounted volume under /config/profile
 # (chromium --user-data-dir; an explicit non-default dir is required for CDP
-# on Chromium 136+). The price service must launch chromium with the same
+# on Chromium 136+). Per ADR 0002 the price service reads the catalog
+# anonymously; this profile is the dormant fallback — if the endpoint is ever
+# gated, a profile-based reader must launch chromium with the same
 # --user-data-dir inside this mount.
 #
+# Networking: CDP (9222) stays on the login container's loopback and is never
+# published to the host — Chromium 153 ignores --remote-debugging-address and
+# binds loopback regardless. Stage 3 reaches CDP by sharing the container's
+# network namespace (docker run --network container:...). The web UI (3100) is
+# published for the phone as HTTPS (the image's 3001): Selkies refuses plain
+# HTTP except from localhost, and the phone comes in over the LAN. The cert is
+# self-signed; the coordinator accepts the warning.
+#
 # Re-running this wizard is the session-expiry re-login path. It is safe to
-# interrupt: .env writes are idempotent upserts and the browser container is
-# stopped on exit.
+# interrupt: .env writes are idempotent upserts, stale Singleton* locks left
+# by a hard-stopped container are cleaned at stage 2, and the browser
+# container is stopped on exit.
 
 TOTAL_STAGES=3
 
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 ENV_FILE="$REPO_ROOT/.env"
 
-HS_WEB_PORT=3100            # web UI (KasmVNC), LAN-reachable while running
+HS_WEB_PORT=3100            # web UI (HTTPS, image port 3001), LAN-reachable while running
 HS_CDP_PORT=9222            # CDP, localhost only
 BROWSER_CONTAINER="hs-prices-login"
 CHROMIUM_IMAGE="linuxserver/chromium:latest"
@@ -215,7 +227,7 @@ NODE_IMAGE="node:24.12.0-alpine"   # matches .tool-versions
 BROWSER_STARTED=0
 cleanup() {
   if [[ "$BROWSER_STARTED" == "1" ]]; then
-    docker stop "$BROWSER_CONTAINER" >/dev/null 2>&1 || true
+    docker stop -t 20 "$BROWSER_CONTAINER" >/dev/null 2>&1 || true
   fi
 }
 trap cleanup EXIT
@@ -286,6 +298,12 @@ fi
 
 HS_PROFILE_DIR="$REPO_ROOT/services/hs-prices/profile"
 mkdir -p "$HS_PROFILE_DIR"
+# A hard-stopped previous run leaves a stale SingletonLock in the profile;
+# Chromium treats it as "in use by another computer" and refuses to start its
+# DevTools server. Clear it before every launch.
+rm -f "$HS_PROFILE_DIR"/profile/SingletonCookie \
+      "$HS_PROFILE_DIR"/profile/SingletonLock \
+      "$HS_PROFILE_DIR"/profile/SingletonSocket
 
 say "Starting a throwaway Chromium with a persistent profile volume."
 note "First run downloads the browser image (~1 GB); later runs start in seconds."
@@ -295,9 +313,8 @@ docker run -d --rm \
   --shm-size=512m \
   -e "PUID=$(id -u)" \
   -e "PGID=$(id -g)" \
-  -e "CHROME_CLI=--remote-debugging-port=9222 --remote-debugging-address=0.0.0.0 --user-data-dir=/config/profile https://healthyselections.ca/account/login" \
-  -p "${HS_WEB_PORT}:3000" \
-  -p "127.0.0.1:${HS_CDP_PORT}:9222" \
+  -e "CHROME_CLI=--remote-debugging-port=9222 --user-data-dir=/config/profile https://healthyselections.ca/account/login" \
+  -p "${HS_WEB_PORT}:3001" \
   -v "$HS_PROFILE_DIR:/config" \
   "$CHROMIUM_IMAGE" >/dev/null
 BROWSER_STARTED=1
@@ -305,7 +322,8 @@ BROWSER_STARTED=1
 printf '  %swaiting for Chromium…%s\n' "$DIM" "$RESET"
 cdp_up=0
 for _ in $(seq 1 45); do
-  if curl -fsS "http://127.0.0.1:${HS_CDP_PORT}/json/version" >/dev/null 2>&1; then
+  if docker exec "$BROWSER_CONTAINER" curl -fsS --max-time 2 \
+       "http://127.0.0.1:${HS_CDP_PORT}/json/version" >/dev/null 2>&1; then
     cdp_up=1
     break
   fi
@@ -321,9 +339,11 @@ printf '  %s✓%s browser is up.\n' "$GREEN" "$RESET"
 lan_ip=$(hostname -I 2>/dev/null | awk '{print $1}')
 say ""
 say "On your phone (same wifi), open:"
-printf '  %s%s  http://%s:%s%s\n' "$BOLD" "$GREEN" "${lan_ip:-<this-machine>}" "$HS_WEB_PORT" "$RESET"
-say "  (or http://localhost:${HS_WEB_PORT} in a browser on this machine)"
+printf '  %s%s  https://%s:%s%s\n' "$BOLD" "$GREEN" "${lan_ip:-<this-machine>}" "$HS_WEB_PORT" "$RESET"
+say "  (or https://localhost:${HS_WEB_PORT} in a browser on this machine)"
 say ""
+step "Your phone will warn about the certificate (it's self-signed):"
+step "tap Advanced / Show Details → Proceed / Visit Website."
 step "You'll see a Chromium desktop, already on the HS login page."
 step "Log into healthyselections.ca with the program's account."
 step "Open any product and confirm you can see prices."
@@ -333,8 +353,12 @@ note "in the browser's address bar."
 say ""
 confirm "Logged in, and prices visible?" || { warn "aborted — browser stopped, nothing half-set. Re-run any time."; exit 1; }
 
+# CDP is reachable at this URL only from a process sharing the login
+# container's network namespace (docker run --network container:...). The
+# price service instead launches its own chromium against HS_PROFILE_DIR, so
+# its CDP is its own loopback.
 CHROME_CDP_URL="http://127.0.0.1:${HS_CDP_PORT}"
-CHROME_WEB_URL="http://127.0.0.1:${HS_WEB_PORT}"
+CHROME_WEB_URL="https://127.0.0.1:${HS_WEB_PORT}"
 write_env CHROME_CDP_URL "$CHROME_CDP_URL"
 write_env CHROME_WEB_URL "$CHROME_WEB_URL"
 write_env HS_PROFILE_DIR "$HS_PROFILE_DIR"
@@ -345,7 +369,7 @@ say "Proving the login works: reading the HS catalog through the profile"
 say "and printing a real item and price."
 note "First run downloads a small Node image (~50 MB)."
 say ""
-verify_out=$(docker run --rm --network host \
+verify_out=$(docker run --rm --network "container:$BROWSER_CONTAINER" \
   -v "$REPO_ROOT/services/hs-prices:/work:ro" \
   -e "CHROME_CDP_URL=$CHROME_CDP_URL" \
   "$NODE_IMAGE" \
@@ -360,7 +384,7 @@ fi
 sample_line=$(printf '%s\n' "$verify_out" | grep '^Sample:' || true)
 
 say "Stopping the login browser…"
-docker stop "$BROWSER_CONTAINER" >/dev/null 2>&1 || true
+docker stop -t 20 "$BROWSER_CONTAINER" >/dev/null 2>&1 || true
 BROWSER_STARTED=0
 
 finish
@@ -369,6 +393,6 @@ note "profile volume: $HS_PROFILE_DIR"
 if [[ -n "$sample_line" ]]; then
   printf '  %sproof:%s %s\n' "$DIM" "$RESET" "$sample_line"
 fi
-note "when the HS session expires (every few weeks), re-run this wizard."
-note "next: the spike reads the catalog via CHROME_CDP_URL in .env."
+note "the profile is the dormant fallback (ADR 0002) — re-run this wizard to revive it."
+note "the price service reads /products.json anonymously; no spike needed."
 printf '\n'
