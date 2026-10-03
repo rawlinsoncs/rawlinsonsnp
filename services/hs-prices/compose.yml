@@ -1,0 +1,20 @@
+# Standalone stack for the price service: docker compose up -d --build
+# from this directory. The machine's other services live in the
+# /opt/docker/composeyourself stack; this is deliberately self-contained so
+# the adapter can be restarted or torn down without touching them.
+#
+# No published ports on purpose. The service has no auth, so it must stay on
+# localhost. It joins the host network namespace and binds 127.0.0.1, so the
+# host can curl it and the LAN cannot reach it at all -- the same trick
+# setup.sh uses for the wizard's CDP port. (BIND_HOST stays 127.0.0.1, the
+# default, so even a bare `docker run -p 8787:8787` cannot expose it.)
+services:
+  hs-prices:
+    build: .
+    image: hs-prices:local
+    container_name: hs-prices
+    restart: unless-stopped
+    environment:
+      PORT: "8787"
+      CACHE_TTL_MS: "900000" # 15 minutes
+    network_mode: host

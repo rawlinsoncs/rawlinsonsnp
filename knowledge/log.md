@@ -1,5 +1,9 @@
 # Update Log
 
+## 2026-09-30 (HS price service built and running)
+- **Creation**: `automation/hs-price-service.md` — the price service is now real: a localhost-only Node container (`hs-prices`, `:8787`) serving `GET /catalog` and `GET /health` from the anonymous read decided in ADR 0002, with a 15-minute cache and no login. Deployed on the program machine; `services/hs-prices/smoke.sh` verifies it after each deploy. It is the first vendor adapter of the shape future suppliers (Costco, etc.) will follow.
+- **Update**: `automation/index.md` — added the new concept; the HS price service is no longer "planned" anywhere in the bundle.
+
 ## 2026-09-30 (HS catalog is anonymously readable)
 - **Update**: `operations/pantry-inventory.md` — corrected the vendor access fact found during the price-service setup wizard's verification run: HS storefront pages are login-gated, but Shopify's `/products.json` returns the full catalog with prices anonymously (190 products). Decision recorded in ADR 0002: the price service reads the endpoint anonymously; the Chromium login profile and wizard (`services/hs-prices/setup.sh`) are retained as the dormant fallback.
 

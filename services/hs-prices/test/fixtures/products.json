@@ -1,0 +1,229 @@
+{
+  "products": [
+    {
+      "id": 9493516452152,
+      "title": "Shire's Halloween Sprinkle Cookies (120 Units per Case)",
+      "handle": "shires-halloween-sprinkle-cookies-120-count",
+      "body_html": "<p><strong>PRE-ORDER YOUR HALLOWEEN COOKIES !! </strong></p>\n<p><strong><span style=\"color: rgb(255, 42, 0);\"><em>*Available to ship beginning October 8th*</em></span></strong></p>\n<p>Nut-Free, PPM 150, and can be served occasionally! </p>\n<p><strong>Ingredients: </strong>Enriched flour, liquid whole egg, white sugar, brown sugar, corn syrup, non-hydrogenated margarine (liquid canola oil, water, modified palm and palm kernel oils, salt, whey powder, mono and diglycerides, soya lecithin, sodium benzoate, artificial flavour, citric acid, vitamin A palmitate, Vitamin D3), shape  sprinkles (icing sugar, modified corn starch, palm kernel oil, cornstarch, confectioners glaze, flavor, soya lecithin, gum arabic, F D &amp; C artificial colour, Red # 40dye, Yellow # 6 dye, Yellow #5 dye , Blue # 1 dye),  polysorbate 60, inulin, cellulose gum, guar gum, xanthan gum, Sodium Bicarbonate, liquid sugar,  baking powder</p>\n<p><strong>Case Pack: </strong>120 x Individually Wrapped Cookies. Sold by the Case.</p>\n<!---->",
+      "published_at": "2026-09-23T07:58:19-04:00",
+      "created_at": "2024-07-18T11:04:48-04:00",
+      "updated_at": "2026-09-30T14:27:19-04:00",
+      "vendor": "Shire's Bakery",
+      "product_type": "Cookies",
+      "tags": [],
+      "variants": [
+        {
+          "id": 49030608159032,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": null,
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": true,
+          "price": "108.00",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 2,
+          "product_id": 9493516452152,
+          "created_at": "2024-07-18T11:04:48-04:00",
+          "updated_at": "2026-09-30T14:27:19-04:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 46750842454328,
+          "created_at": "2024-07-18T11:06:21-04:00",
+          "position": 1,
+          "updated_at": "2024-07-18T11:06:22-04:00",
+          "product_id": 9493516452152,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0872/9424/7224/files/Untitleddesign-2024-07-18T110554.011.png?v=1721315182",
+          "width": 1080,
+          "height": 1080
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 9466931740984,
+      "title": "E.D. Smith Strawberry Jam (1 Jar x 250 ml)",
+      "handle": "e-d-smith-strawberry-jam-250-ml",
+      "body_html": "<p>Delicious strawberry jam! Perfect spread for bagels, english muffins, and scones. </p>\n<!---->",
+      "published_at": "2026-09-22T11:03:10-04:00",
+      "created_at": "2024-07-02T15:06:41-04:00",
+      "updated_at": "2026-09-30T14:27:19-04:00",
+      "vendor": "Healthy Selections",
+      "product_type": "Spreads, Dips & Sauces",
+      "tags": [],
+      "variants": [
+        {
+          "id": 48959255642424,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": "",
+          "requires_shipping": true,
+          "taxable": false,
+          "featured_image": null,
+          "available": true,
+          "price": "4.85",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 2,
+          "product_id": 9466931740984,
+          "created_at": "2024-07-02T15:06:42-04:00",
+          "updated_at": "2026-09-30T14:27:19-04:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 46494325866808,
+          "created_at": "2024-07-02T15:06:15-04:00",
+          "position": 1,
+          "updated_at": "2024-07-02T15:06:16-04:00",
+          "product_id": 9466931740984,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0872/9424/7224/files/Untitleddesign_62.png?v=1719947176",
+          "width": 1080,
+          "height": 1080
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 9493758443832,
+      "title": "Sub on 3\" bun",
+      "handle": "turkey-sub-on-whole-wheat-bun",
+      "body_html": "<p>Your choice of turkey, chicken Caesar, tuna or egg salad. </p>\n<p><em><strong>TURKEY SUB</strong> <strong class=\"x-el x-el-span c1-1o c1-1p c1-b c1-7g c1-5r c1-7h c1-7i\">Ingredients:<span> </span></strong></em><span class=\"x-el x-el-span c1-1o c1-1p c1-b c1-7g c1-5r c1-7h c1-7i\">turkey slices, mayo, yellow cheese on a white bun. </span></p>\n<p><em><strong><span class=\"x-el x-el-span c1-1o c1-1p c1-b c1-7g c1-5r c1-7h c1-7i\">CHICKEN CAESAR SUB Ingredients: </span></strong></em><span class=\"x-el x-el-span c1-1o c1-1p c1-b c1-7g c1-5r c1-7h c1-7i\"> chicken, Caesar dressing on a white bun.</span></p>\n<p><em><strong><span class=\"x-el x-el-span c1-1o c1-1p c1-b c1-7g c1-5r c1-7h c1-7i\">TUNA SUB Ingredients: </span></strong></em><span class=\"x-el x-el-span c1-1o c1-1p c1-b c1-7g c1-5r c1-7h c1-7i\">tuna, mayo, onion, celery on a white bun.</span></p>\n<p><em><strong><span class=\"x-el x-el-span c1-1o c1-1p c1-b c1-7g c1-5r c1-7h c1-7i\">EGG SALAD SUB Ingredients: </span></strong></em><span class=\"x-el x-el-span c1-1o c1-1p c1-b c1-7g c1-5r c1-7h c1-7i\">egg, mayo, onion, celery, yellow cheese on a white bun.</span></p>\n<p>Sold Individually. Individually Wrapped. <em><strong>Wraps are delivered on Tuesday's and must be consumed by Friday of the same week.</strong></em></p>\n<p><span style=\"color: rgb(255, 42, 0);\"><em><strong>Orders must be placed by Thursday at 10:00 for delivery on the following Tuesday.</strong></em></span></p>",
+      "published_at": "2026-03-12T08:36:41-04:00",
+      "created_at": "2024-07-18T14:13:22-04:00",
+      "updated_at": "2026-09-30T14:27:19-04:00",
+      "vendor": "Healthy Selections",
+      "product_type": "Sandwiches & Wraps",
+      "tags": [],
+      "variants": [
+        {
+          "id": 51883197497656,
+          "title": "Turkey",
+          "option1": "Turkey",
+          "option2": null,
+          "option3": null,
+          "sku": null,
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": true,
+          "price": "2.01",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 9493758443832,
+          "created_at": "2026-03-12T08:34:26-04:00",
+          "updated_at": "2026-09-30T14:27:19-04:00"
+        },
+        {
+          "id": 51883197530424,
+          "title": "Tuna",
+          "option1": "Tuna",
+          "option2": null,
+          "option3": null,
+          "sku": null,
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": true,
+          "price": "2.01",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 2,
+          "product_id": 9493758443832,
+          "created_at": "2026-03-12T08:34:26-04:00",
+          "updated_at": "2026-09-30T14:27:19-04:00"
+        },
+        {
+          "id": 51883197563192,
+          "title": "Egg Salad and Cheddar",
+          "option1": "Egg Salad and Cheddar",
+          "option2": null,
+          "option3": null,
+          "sku": null,
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": true,
+          "price": "2.01",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 3,
+          "product_id": 9493758443832,
+          "created_at": "2026-03-12T08:34:26-04:00",
+          "updated_at": "2026-09-30T14:27:19-04:00"
+        },
+        {
+          "id": 51883197595960,
+          "title": "Chicken Caesar",
+          "option1": "Chicken Caesar",
+          "option2": null,
+          "option3": null,
+          "sku": null,
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": true,
+          "price": "2.01",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 4,
+          "product_id": 9493758443832,
+          "created_at": "2026-03-12T08:34:26-04:00",
+          "updated_at": "2026-09-30T14:27:19-04:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 46969778864440,
+          "created_at": "2024-08-13T11:24:50-04:00",
+          "position": 1,
+          "updated_at": "2024-08-13T11:24:51-04:00",
+          "product_id": 9493758443832,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0872/9424/7224/files/3_bc1b0642-05ba-4c1e-8cfe-833b13c6d703.png?v=1723562691",
+          "width": 1080,
+          "height": 1080
+        }
+      ],
+      "options": [
+        {
+          "name": "Flavour ",
+          "position": 1,
+          "values": [
+            "Turkey",
+            "Tuna",
+            "Egg Salad and Cheddar",
+            "Chicken Caesar"
+          ]
+        }
+      ]
+    }
+  ]
+}

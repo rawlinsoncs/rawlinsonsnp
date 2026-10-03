@@ -1,6 +1,6 @@
 # Spec: HS price service
 
-Status: ready-for-agent
+Status: implemented (2026-09-30)
 
 ## Problem Statement
 

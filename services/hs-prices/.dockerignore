@@ -1,0 +1,14 @@
+# Never let local secrets or session state enter the build context. The
+# profile holds live Healthy Selections session cookies; sending it to the
+# daemon at all is unnecessary and risks it landing in a layer or a build
+# provenance attestation.
+profile/
+.env
+*.log
+
+# Not needed to run the service.
+test/
+setup.sh
+verify-login.cjs
+compose.yml
+README.md
