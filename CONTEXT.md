@@ -16,6 +16,14 @@ _Avoid_: breakfast, two-item snack
 A single food that covers both Snack components, such as a whole wheat vegetable samosa.
 _Avoid_: combo item, two-group item
 
+**Slot**:
+One item's share of a school day per Snack component: 540 servings for grades 1–8 or 180 for kindergarten (2026–27 enrollment). Every slot is filled by a single item.
+_Avoid_: mixed day, pooled servings
+
+**Delta-fill**:
+A Gap-fill Purchase that tops a stock lot up to its Slot's size (100 cheese portions in stock, so 440 purchased to complete a 540 slot).
+_Avoid_: top-up order, mixing a second item into the slot
+
 **Substitution bag**:
 A labeled individual bag replacing a Menu item for a student with an allergy or restriction; prepared day-of by the allergy system, independent of Menu planning.
 _Avoid_: allergy menu, alternate snack

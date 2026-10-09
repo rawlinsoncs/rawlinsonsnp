@@ -1,5 +1,9 @@
 # Update Log
 
+## 2026-10-07 (menu builder — slot model and consistency rules)
+- **Update**: `prompts/generate-menu.md` — rewritten around the coordinator's slot model after the week-of-Oct-5 run: each serving day × component is two single-item slots (540 for grades 1–8 + 180 for kindergarten); partial lots are delta-filled by purchase rather than pooled, and stranded remainders are written off with the waste cost flagged every run. New standing rules: grape tomatoes never in a K slot; raisins ride cheese days; spoon items (Yogurt Cups, Applesauce) share a day; Millennium's order-by is hard by default, with late orders only at the coordinator's discretion, case by case; disposals count as unavailable immediately (waste-logging latency); the menu-draft table is four slot columns; and the new distribution-schedule output — a highlighted full-week table plus a paste-ready stock-only TSV whose item text mirrors the Deliveries row character-for-character.
+- **Note**: The run now fires via the repo-local `menu` skill (`.agents/skills/menu/`), a thin pointer at this prompt so the bundle stays the single source of truth. `CONTEXT.md` gained Slot and Delta-fill.
+
 ## 2026-09-30 (HS price service built and running)
 - **Creation**: `automation/hs-price-service.md` — the price service is now real: a localhost-only Node container (`hs-prices`, `:8787`) serving `GET /catalog` and `GET /health` from the anonymous read decided in ADR 0002, with a 15-minute cache and no login. Deployed on the program machine; `services/hs-prices/smoke.sh` verifies it after each deploy. It is the first vendor adapter of the shape future suppliers (Costco, etc.) will follow.
 - **Update**: `automation/index.md` — added the new concept; the HS price service is no longer "planned" anywhere in the bundle.
