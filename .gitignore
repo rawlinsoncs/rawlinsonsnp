@@ -3,3 +3,5 @@ public/
 .env
 # Chromium profile with the live HS session cookies (services/hs-prices)
 services/hs-prices/profile/
+# Subagent-driven-development scratch (ledger, task briefs, reports)
+.superpowers/
