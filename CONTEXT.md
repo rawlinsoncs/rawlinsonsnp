@@ -24,6 +24,14 @@ _Avoid_: mixed day, pooled servings
 A Gap-fill Purchase that tops a stock lot up to its Slot's size (100 cheese portions in stock, so 440 purchased to complete a 540 slot).
 _Avoid_: top-up order, mixing a second item into the slot
 
+**Distribution window**:
+The planning unit for a menu run: five consecutive distribution days from a coordinator-set anchor, usually aligned with delivery days and possibly crossing calendar weeks.
+_Avoid_: serving week (when meaning the planning window), five-day plan
+
+**Available from**:
+The day a delivery's servings become usable for distribution; next day by default, or a coordinator-set override for same-day arrivals (e.g., Millennium's morning bake).
+_Avoid_: delivery date (when meaning the usable date), arrival date
+
 **Substitution bag**:
 A labeled individual bag replacing a Menu item for a student with an allergy or restriction; prepared day-of by the allergy system, independent of Menu planning.
 _Avoid_: allergy menu, alternate snack
