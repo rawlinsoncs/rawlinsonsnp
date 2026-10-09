@@ -255,7 +255,7 @@ Never invent rows, items, prices, or dates.
 - **Safety stock replenishment** — if the shelf-stable reserve (granola
   bars; raisins or apple squeeze packs) is below its two-day floor, add
   replenishment quantities to the HS suggestion to restore the floor,
-  reported separately from serving-week gaps. Millennium baked goods are
+  reported separately from window gaps. Millennium baked goods are
   perishable and never count toward the reserve.
 
 ## Cost per child per day
