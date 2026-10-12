@@ -5,9 +5,10 @@ Hugo + Docsy documentation site for the Rawlinson Student Nutrition Program (SNP
 ## Commands
 
 - Dev server (drafts included): `hugo server -D`
-- CI-parity build check: `hugo --gc --minify --baseURL "http://localhost/"` — keep the `baseURL` flag; the site is served from a subpath, and CI passes an explicit base URL too
+- CI-parity build check: `hugo --gc --minify --baseURL "http://localhost/"` — keep the `baseURL` flag; the site is served from a subpath, and CI passes an explicit base URL too. **Never run `--gc` in the working tree**: `resources/_gen/` is committed and `--gc` prunes it. Drop `--gc` (and consider `--destination` outside the repo) for local builds.
 - Validate the knowledge bundle: `bash knowledge/validate.sh knowledge` — exit code = number of failures; `W*` lines are advisory warnings
-- There is no test suite. A clean `hugo` build plus zero `validate.sh` FAIL lines is the verification bar.
+- Price-service tests: `cd services/hs-prices && npm test` — hermetic, a recorded fixture stands in for the vendor
+- The Hugo site has no test suite. Its verification bar is a clean `hugo` build plus zero `validate.sh` FAIL lines; `npm test` covers the price service. `checks.yml` runs both the validator and the adapter tests on every push and pull request.
 
 ## Toolchain
 
