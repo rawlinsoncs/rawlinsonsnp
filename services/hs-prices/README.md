@@ -76,6 +76,13 @@ docker compose logs -f
 `/catalog` errors, or the catalog comes back without prices. A gate looks
 exactly like an empty or priceless catalog, so that assertion is the point.
 
+CI runs `npm test` only — a recorded fixture stands in for the vendor,
+so nothing upstream can make it red. That means a re-gated
+`/products.json` will not turn CI red either; it surfaces as
+`upstream_error` at the next menu run. `./smoke.sh` against a running
+service remains the only check that exercises the live vendor, so run it
+after deploying.
+
 ## Configuration
 
 Read from the environment; defaults in parentheses. The wizard's `.env` in the
