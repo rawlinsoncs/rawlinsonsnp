@@ -17,7 +17,7 @@ Pinned in `.tool-versions` (asdf) and in CI: Hugo **Extended** 0.153.2, Dart Sas
 
 - `node_modules/` and `resources/_gen/` are intentionally committed (vendored PostCSS toolchain for Docsy's asset pipeline, and Hugo's generated asset cache). Do not add them to `.gitignore`, prune, or "clean them up".
 - Docsy is a Hugo module (`go.mod`), not a git submodule — `.gitmodules` is empty. Update with `hugo mod get -u` (requires Go).
-- CI (`.github/workflows/pages.yml`) builds and deploys on every push to `main`; there is no other deploy path. Assume anything merged/pushed to `main` goes live immediately. CI builds with `TZ: Europe/Oslo`.
+- CI (`.github/workflows/pages.yml`) builds and deploys on every push to `main`; there is no other deploy path. Assume anything merged/pushed to `main` goes live immediately. CI builds with `TZ: America/Toronto`. A separate `.github/workflows/checks.yml` validates the knowledge bundle and runs the price-service tests; it reports status but never blocks the deploy.
 - Goldmark `unsafe = true` in `hugo.toml`, so raw HTML in Markdown is allowed.
 
 ## Layout
